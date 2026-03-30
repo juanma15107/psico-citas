@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(16, 57, 113);
+}
+header{
+    background-color: antiquewhite;
+}
+nav{
+    background-color: antiquewhite;
+}
+.titulo{
+    text-align: center;
+}
+.ul1{
+    text-align: left;
+    display: flex;
+}
+.ul2{
+    text-align: right;
+}
+.main1{
+    height: auto; width: 500mpx;
+    text-align: center;
+     background-color: antiquewhite;
+}
+footer{
+    background-color: antiquewhite;
+}
+.ul3{
+    text-align: right;
+}
+.ul4{
+    text-align: right;
+}
