@@ -10,14 +10,14 @@ nav{
 .titulo{
     text-align: center;
 }
-.ul1{
+.navbar{
     text-align: left;
     display: flex;
 }
-.ul2{
+.iniciarsesion{
     text-align: right;
 }
-.main1{
+.agendarcitas{
     height: auto; width: 500mpx;
     text-align: center;
      background-color: antiquewhite;
@@ -25,9 +25,9 @@ nav{
 footer{
     background-color: antiquewhite;
 }
-.ul3{
+.contactanos{
     text-align: right;
 }
-.ul4{
+.sobrenostros{
     text-align: right;
 }
