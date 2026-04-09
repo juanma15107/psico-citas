@@ -1,0 +1,86 @@
+/* ====== GENERAL ====== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+}
+
+/* ====== NAVBAR ====== */
+.custom-navbar {
+    background-color: #eadcf0;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.brand-title {
+    color: #7a3db8;
+    font-weight: 700;
+}
+
+/* BOTÓN */
+.login-btn {
+    background: linear-gradient(90deg, #c88df5, #a85be3);
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    border: none;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+/* ====== SECCIÓN ====== */
+.login-section {
+    min-height: 85vh;
+}
+
+/* ====== TARJETA ====== */
+.login-card {
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(123, 91, 141, 0.2);
+}
+
+/* ====== TEXTOS ====== */
+.login-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #4b007d;
+}
+
+.login-subtitle {
+    color: #7b5b8d;
+}
+
+/* ====== BOTÓN ENVIAR ====== */
+.submit-btn {
+    background: linear-gradient(90deg, #c88df5, #a85be3);
+    color: white;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* ====== LINK DOCENTE ====== */
+.docente-link {
+    text-decoration: none;
+    color: #6d2da8;
+    font-weight: 600;
+}
+
+.docente-link:hover {
+    text-decoration: underline;
+}
