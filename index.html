@@ -1,67 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psico-Agenda</title>
     <link rel="stylesheet" href="./css_proyecto/index.css">
-    <title>mindcare</title>
-</head>
-  
-<body>
-    <header>
-        <nav>
 
-             <ul class="navbar"> 
-                <!-- es la barra donde tenemos el logo y el titulo de nuestra pagina -->
-                <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview.png" alt="nuestro logo" width="100mpx" height="auto">
-                <ul class="titulo">
-                    <h1>mindcare</h1>
-                </ul>
-            </ul>
-            <ul class="iniciarsesion">
-                <!-- nuestro inicio de sesion -->
-                <a href="./iniciar_sesion.html">iniciar sesion</a>
-            </ul>
+    <!DOCTYPE html>
+
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Psico-Agenda</title>
+
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="./css_proyecto/style.css">
+
+
+    </head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+            <div class="container">
+
+
+                <div>
+                    <h1 class="brand-title">Psico-Agenda</h1>
+                    <p class="brand-subtitle">Cuidado con tu mente, cuida de ti!</p>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sobre el perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Acerca de Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Contactanos.html">Contáctanos</a></li>
+                        <li class="nav-item">
+                            <a class="btn login-btn" href="./iniciar_sesion.html">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
-        <!-- barra de navegacion -->
-<div>
-  <button type="button"></button>
-  <button type="button">
-    <span>Toggle Dropdown</span>
-  </button>
-  <ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  </ul>
-</div>
-<!-- /barra de navegacion -->
+
+
     </header>
 
-    <main class="agendarcitas">
-        <h2> bienvenidos a mindcare</h2>
+    <main class="hero-section container text-center">
+        <h2 class="hero-title">BIENVENIDOS</h2>
 
-            {}
-        </h3>
+
+        <p class="hero-text mx-auto">
+            Bienvenidos a Psico-Agenda, un espacio pensado para ayudarte a organizar y agendar tus citas psicológicas de
+            manera fácil, rápida y segura.
+        </p>
+
+        <a href="./Paginas/iniciar_sesion.html" class="btn hero-btn mt-3">Inicia Sesión ya</a>
+
+
     </main>
 
-    <!-- barra vertical -->
-    
-<!-- /barra vertical -->
 
-    <footer>
-        <p>&copy; psico-citas</p>
-            <h3>Direccion institucion educativa</h3>
-            <h4>Cra. 50B #97a-30, Santa Cruz, Medellín, Santa Cruz, Medellín</h4>
-        </div>
-        <ul class="contactanos">
-            <a href="./Contactanos.html">contactanos</a>
-        </ul>
-        <ul class="sobrenosotros">
-            <a href="./Creadores.html">creadores de la pagina</a>
-        </ul>   
+    <footer class="footer-section text-center">
+        <p><strong>&copy; Psico-Agenda</strong></p>
+        <p>Cra. 50B #97a-30, Santa Cruz, Medellín</p>
+
+
+        <a href="./Contactanos.html" class="footer-link">Contáctanos</a>
+        <a href="./Creadores.html" class="footer-link">Creadores</a>
+
+
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
