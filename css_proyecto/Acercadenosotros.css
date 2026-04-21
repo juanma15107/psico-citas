@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+}
+
+
+.boton {
+    background-color: #d9c5e6;
+    text-align: center;
+    padding: 15px;
+}
+
+.encabezado {
+    background-color: #a85be3;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.text-center {
+    margin: 10px;
+}
+
+
+
+footer {
+    background-color: #d9c5e6;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
