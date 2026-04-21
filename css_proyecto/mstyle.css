@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e6d6f5, #d4bdf0);
+    height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #c8a2e8;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Título */
+nav h1 {
+    flex: 1;
+    text-align: center;
+    color: #53107c;
+}
+
+/* Links */
+nav a {
+    text-decoration: none;
+    color: #4b2c5e;
+    background-color: #e6d6f5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #b891e3;
+    color: white;
+}
+
+/* FORMULARIO */
+form {
+    width: 300px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Título form */
+form h2 {
+    margin-bottom: 20px;
+    color: #6a3fa0;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus {
+    border-color: #b891e3;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 10px;
+   
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #9c6fd6;
+}
