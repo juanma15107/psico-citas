@@ -3,11 +3,18 @@ body {
     font-family: Arial, sans-serif;
     background-color: #eadcf0;
     color: #3d0a5e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 .custom-navbar {
     background-color: #eadcf0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
 }
 
 .logo {
@@ -18,54 +25,64 @@ body {
 .brand-title {
     color: #7a3db8;
     font-weight: bold;
+    text-align: center;
 }
-
 
 .login-btn {
     background-color: #a85be3;
     color: white;
     border-radius: 20px;
     padding: 8px 18px;
+    border: none;
 }
 
 .login-btn:hover {
     color: white;
+    background-color: #9448cf;
 }
-
 
 .login-section {
     min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .login-card {
     background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
-
 
 .login-title {
     color: #4b007d;
     font-size: 2.2rem;
+    text-align: center;
 }
 
 .login-subtitle {
     color: #7b5b8d;
+    text-align: center;
 }
-
 
 .submit-btn {
     background-color: #a85be3;
     color: white;
     border-radius: 20px;
     padding: 10px;
+    border: none;
+    width: 100%;
 }
 
 .submit-btn:hover {
     color: white;
+    background-color: #9448cf;
 }
-
 
 .docente-link {
     color: #6d2da8;
@@ -75,4 +92,20 @@ body {
 
 .docente-link:hover {
     text-decoration: underline;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.hero-btn {
+    background-color: #a85be3;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
 }
