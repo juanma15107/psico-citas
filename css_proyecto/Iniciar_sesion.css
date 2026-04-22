@@ -109,3 +109,17 @@ body {
     border-radius: 25px;
     border: none;
 }
+
+.encabezado {
+    background-color: #d9c5e6;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.body {
+    margin: 0;
+    padding: 0;
+}
