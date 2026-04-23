@@ -24,9 +24,11 @@ nav{
 
 /*titulo */
 h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     flex: 1;
     text-align: center;
-    color: #53107c;}
+    color: #53107c;
+}
 
 /*links*/
 nav a {
@@ -35,30 +37,30 @@ nav a {
     background-color: #e6d6f5;
     padding: 3px 4px;
     border-radius: 8px;
+    margin:6px;
 }
 
 /*formulario*/
 form{
+    text-align: center;
     width:300px;
-    margin: 60px auto;
+    margin: 60px auto ;
     background-color: #ffffffde;
     padding:30px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0px 2px 5px  rgba(0,0,0,0.1);
 }
 /* titulo de formulario*/
 form h2{
+    font-family:'Times New Roman', Times, serif;
     margin-bottom: 20px;
-    color: #6a3fa0;
+    color: #6423b2;
 }
 
 /*botón*/
 button{
     width: 70px;
     padding:10px;
-
-    color: rgba(255, 255, 255, 0.32);
-    
     border-radius: 8px;
     cursor:pointer;
     transition: 0.3s;
