@@ -1,9 +1,39 @@
-.colorfondo{
+.colorfondo { 
     background-color: #d9c5e6;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-.secsion{
- background-color:#eadcf0;
+
+.nav {
+    text-align: right;
+    padding: 10px;
 }
-.colorblanco{
+
+.seccion {
+    background-color: #eadcf0;
+    text-align: center;
+    padding: 15px;
+}
+
+/* CONTENEDOR */
+.creadores {
+    display: grid;
+    grid-template-columns: 1fr; /* móvil: 1 por fila */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* TARJETAS */
+.card {
     background-color: rgb(251, 252, 253);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* PANTALLAS GRANDES */
+@media (min-width: 768px) {
+    .creadores {
+        grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+    }
 }
