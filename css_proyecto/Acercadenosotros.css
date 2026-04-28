@@ -5,33 +5,24 @@ body {
     color: #3d0a5e;
 }
 
-.encabezado {
-background-color: #d9c5e6;
-    text-align: center;
-    padding: 15px;
+
+html {
+    height: 100%;
+    margin: 0;
 }
-
-
-.boton {
-    background-color: #a85be3; 
-    color: white;            
-    padding: 5px 10px;       
-    text-decoration: none;    
-    border-radius: 5px;       
-    display: block;           
-    width: fit-content;       
-    margin: 0 auto;        
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-.text-center {
-    margin: 10px;
+main {
+    flex: 1;
 }
-
 
 
 footer {
     background-color: #d9c5e6;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    margin: 0;
 }
