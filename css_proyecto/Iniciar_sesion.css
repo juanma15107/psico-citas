@@ -103,15 +103,14 @@ body {
 }
 
 .hero-btn {
-    background-color: #a85be3;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 10px 25px;
     border-radius: 25px;
     border: none;
 }
 
 .encabezado {
-    background-color: #d9c5e6;
     display: block;
     margin-left: 0;
     margin-right: 0;
@@ -122,4 +121,20 @@ body {
 .body {
     margin: 0;
     padding: 0;
+}
+
+.caja-blanca{
+    background: white;
+    padding: 25px;
+    width: 320px;
+    border-radius: 25px 25px 0 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.caja-morada{
+    background: #c8a2e8;
+    padding: 30px;
+    width: 320px;
+    border-radius: 0 0 30px 30px;
 }
