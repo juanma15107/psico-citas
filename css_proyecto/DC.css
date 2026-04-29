@@ -1,30 +1,23 @@
 * {
     margin: 1;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 /*fondo*/
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#e6d6f5,#e6d6f0);
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e6d6f5, #e6d6f0);
     height: 100vh;
 }
- 
-header{
-    background-color: #c8a2e8;
-    padding: 15px;
-}
 
-nav{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
+
 
 
 /*titulo */
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+h1 {
+    font-family: Arial, sans-serif;
     flex: 1;
     text-align: center;
     color: #53107c;
@@ -33,42 +26,40 @@ h1{
 /*links*/
 nav a {
     text-decoration: none;
-    color:#4b2c5e;
+    color: #4b2c5e;
     background-color: #e6d6f5;
     padding: 3px 4px;
     border-radius: 8px;
-    margin:6px;
+    margin: 6px;
 }
 
 /*formulario*/
-form{
+form {
     text-align: center;
-    width:300px;
-    margin: 60px auto ;
+    width: 300px;
+    margin: 60px auto;
     background-color: #ffffffde;
-    padding:30px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px  rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 /* titulo de formulario*/
-form h2{
-    font-family:'Times New Roman', Times, serif;
+form h2 {
+    font-family: Arial, sans-serif;
     margin-bottom: 20px;
     color: #6423b2;
 }
 
 /*botón*/
-button{
+button {
     width: 70px;
-    padding:10px;
+    padding: 10px;
     border-radius: 8px;
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: #9c6fd6;
 }
-
-
-
