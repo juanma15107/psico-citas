@@ -17,6 +17,7 @@
     text-align: center;
     padding: 15px;
     font-weight: bold;
+    color: #7a3db8;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -53,4 +54,7 @@
     .creadores {
         grid-template-columns: 1fr;
     }
+}
+.custom-navbar {
+    background-color: #eadcf0;
 }
