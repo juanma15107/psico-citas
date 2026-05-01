@@ -5,16 +5,12 @@ body {
     color: #3d0a5e;
     display: flex;
     flex-direction: column;
-    align-items: center;
+   
 }
 
 .custom-navbar {
     background-color: #eadcf0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 30px;
+    
 }
 
 .logo {
@@ -34,6 +30,7 @@ body {
     border-radius: 20px;
     padding: 8px 18px;
     border: none;
+    margin: 0%;
 }
 
 .login-btn:hover {
@@ -137,5 +134,22 @@ body {
     padding: 30px;
     width: 320px;
     border-radius: 0 0 30px 30px;
+    margin: 0%;
+    
 }
+
+.ed{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+.centro{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    align-items: center;
+}
+
+
 
