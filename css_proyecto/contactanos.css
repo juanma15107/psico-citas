@@ -80,3 +80,37 @@ footer {
     font-size: 14px;
 }
 
+}
+.custom-navbar {
+    background-color: #eadcf0;
+}
+
+.custom-navbar {
+    background-color: #eadcf0;
+}
+
+.brand-title {
+    color: #7a3db8;
+    font-weight: bold;
+}
+
+.brand-subtitle {
+    color: #7b5b8d;
+}
+
+.nav-link {
+    color: #2f1a3b ;
+}
+
+.nav-link:hover {
+    color: #8f4fd8;
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
