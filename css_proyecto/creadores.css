@@ -23,41 +23,29 @@
   background-color:#eadcf0;  
 }
 
-/* CONTENEDOR PRINCIPAL */
 .creadores {
     background-color: #eadcf0;
     min-height: 70vh;
     display: grid;
-    grid-template-columns: repeat(2, 180px);
+    grid-template-columns: repeat(4, 180px);
     justify-content: center;  /* centra horizontal */
     align-content: center;    /* centra vertical */
     gap: 25px;
 }
-
-/* TARJETAS */
-.card {
-    background-color: #fff;
+.foto-creadores{
+    width: 150px;
     height: 150px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: 0.3s;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Hover bonito */
-.card:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-footer {
+.footer {
+    width: 100%;
     background-color: #d9c5e6;
     text-align: center;
-    padding: 10px;
-    margin: 0;
+    padding: 10px 0;
     color: #3d0a5e;
     font-size: 14px;
 }
