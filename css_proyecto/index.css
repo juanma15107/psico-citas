@@ -20,11 +20,11 @@ body {
 }
 
 .nav-link {
-    color: #2f1a3b !important;
+    color: #2f1a3b ;
 }
 
 .nav-link:hover {
-    color: #8f4fd8 !important;
+    color: #8f4fd8;
     text-decoration: underline;
 }
 
