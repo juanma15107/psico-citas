@@ -17,6 +17,7 @@
     text-align: center;
     padding: 15px;
     font-weight: bold;
+    color: #7a3db8;
 }
 .color{
   background-color:#eadcf0;  
@@ -66,4 +67,7 @@ footer {
     .creadores {
         grid-template-columns: 1fr;
     }
+}
+.custom-navbar {
+    background-color: #eadcf0;
 }

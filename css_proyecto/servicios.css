@@ -1,0 +1,21 @@
+body{
+    background:#eadcf0; 
+}
+.brand-title {
+    color: #7a3db8;
+    font-weight: bold;
+    text-align: center;
+}
+.login-subtitle {
+    color: #7b5b8d;
+    text-align: center;
+}
+.ns{
+    color: #7a3db8;
+    font-weight: bold;
+    text-align: center;
+}
+.informacion_caja{
+    font-weight: bold;
+    text-align: center;
+}
