@@ -5,13 +5,13 @@
     min-height: 100vh;
 }
 
-/* Navbar extra (opcional) */
+
 .nav {
     text-align: right;
     padding: 10px;
 }
 
-/* Título */
+
 .seccion {
     background-color: #eadcf0;
     text-align: center;
@@ -41,16 +41,16 @@
     margin: 0 auto;
 }
 
-.footer {
-    width: 100%;
+footer {
     background-color: #d9c5e6;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    margin: 0;
     color: #3d0a5e;
     font-size: 14px;
 }
 
-/* Móvil */
+
 @media (max-width: 600px) {
     .creadores {
         grid-template-columns: 1fr;
