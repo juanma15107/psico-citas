@@ -109,13 +109,8 @@ footer {
     border-radius: 20px;
     padding: 8px 15px;
 }
+a{
+    text-decoration: none;
+    color:#6d2da8
 
-.hero-btn {
-    background-color: #a85be3;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 25px;
 }
-
-
-
