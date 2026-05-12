@@ -5,12 +5,10 @@
     min-height: 100vh;
 }
 
-
 .nav {
     text-align: right;
     padding: 10px;
 }
-
 
 .seccion {
     background-color: #eadcf0;
@@ -19,6 +17,7 @@
     font-weight: bold;
     color: #7a3db8;
 }
+
 .color{
   background-color:#eadcf0;  
 }
@@ -32,6 +31,7 @@
     align-content: center;    /* centra vertical */
     gap: 25px;
 }
+
 .foto-creadores{
     width: 150px;
     height: 150px;
@@ -49,7 +49,6 @@ footer {
     color: #3d0a5e;
     font-size: 14px;
 }
-
 
 @media (max-width: 600px) {
     .creadores {
