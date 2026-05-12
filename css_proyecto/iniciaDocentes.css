@@ -1,5 +1,35 @@
 body {
     background-color: #e9f7ef;
+    font-family: Arial, sans-serif;
+}
+
+
+.custom-navbar {
+    background-color: #cfa0f3 !important;
+    padding: 10px 50px;
+}
+
+.nav-link {
+    color: #3d0a5e !important;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+
+
+.login-btn-custom:hover {
+    background-color: #5e35b1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card {
+    border-radius: 15px;
+    transition: transform 0.2s;
+    background-color: #ffffff;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
 }
 
 h2 {
@@ -8,9 +38,11 @@ h2 {
     color: #3d0a5e;
 }
 
-.panel {
-    font-size: 150%;
-background-color: #cfa0f3;
-    font-weight: bold;
-padding-left: 30px;
+footer {
+    background-color: #d9c5e6;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    color: #3d0a5e;
+    font-size: 14px;
 }
