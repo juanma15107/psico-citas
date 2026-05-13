@@ -33,15 +33,12 @@ font-family: Arial, sans-serif;}
     transform: translateY(-5px);
 }
 
-
-
-footer {
+.footer {
+    width: 100%;
     background-color: #d9c5e6;
     text-align: center;
-    padding: 10px;
-    margin:0;
+    padding: 10px 0;
     color: #3d0a5e;
-    font-size: 14px;
+    font-size: 0%;
 }
-
 
