@@ -10,6 +10,15 @@ font-family: Arial, sans-serif;}
     color: #7a3db8;
     font-weight: bold;
 }
+.card-amarilla {
+    background-color: #fffbea;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    height: 100%;
+}
+
 
 .nav-link {
     color: #3d0a5e !important;
