@@ -152,4 +152,21 @@ body {
 }
 
 
+.footer-section {
+    background-color: #d9c5e6;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-link {
+    margin: 10px;
+    color: #6d2da8;
+
+    font-weight: 600;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
 
