@@ -3,9 +3,10 @@ body{
 }
 
 .brand-title {
-    color: #7a3db8;
+    font-size: 40px;
     font-weight: bold;
-    text-align: center;
+    color: #a85be3;
+    margin: 0;
 }
 
 .login-subtitle {
