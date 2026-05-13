@@ -1,32 +1,38 @@
 body{
     background:#eadcf0; 
 }
+
 .brand-title {
     color: #7a3db8;
     font-weight: bold;
     text-align: center;
 }
+
 .login-subtitle {
     color: #7b5b8d;
     text-align: center;
 }
+
 .ns{
     color: #7a3db8;
     font-weight: bold;
     text-align: center;
 }
+
 .informacion_caja{
     font-weight: bold;
     text-align: center;
 }
+
 .card {
-    border: none;
+    border: 0%;
     border-radius: 15px;
     background-color: #fffbea;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px;
     height: 100%;
+    margin: 0%;
 }
 
 .custom-navbar {
@@ -57,3 +63,13 @@ body{
     border-radius: 20px;
     padding: 8px 15px;
 }
+
+footer {
+    background-color: #d9c5e6;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    color: #3d0a5e;
+    font-size: 14px;
+}
+
