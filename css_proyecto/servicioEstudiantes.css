@@ -64,12 +64,13 @@ body{
     padding: 8px 15px;
 }
 
-footer {
-    background-color: #d9c5e6;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    color: #3d0a5e;
-    font-size: 14px;
+footer{
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    min-height: 108px;
+    color:#3d0a5e;
+    background-color:#d9c5e6;
+    justify-content: center;
 }
 
