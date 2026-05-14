@@ -55,3 +55,13 @@ h2 {
     display: block;
     margin: 0 auto;
 }
+
+footer{
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    min-height: 108px;
+    color:#3d0a5e;
+    background-color:#d9c5e6;
+    justify-content: center;
+}
