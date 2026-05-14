@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Estudiantes</title>
+
+    <link rel="stylesheet" href="../css_proyecto/verEstudiantes(panelDocente).css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container">
+
+                <div>
+                    <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
+                        alt="logo" width="150px">
+                </div>
+
+                <div>
+                    <h1 class="brand-title">Psico-Agenda</h1>
+                    <p class="brand-subtitle">¡Cuidado con tu mente, cuida de ti!</p>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./iniciaDocentes.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./serviciosDocente.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./SolicitarCita(panelDocente).html">Solicitar
+                                Cita</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./verEstudiantes(panelDocente).html">Ver
+                                Estudiantes</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn login-btn-custom" href=".">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+
+    <section class="container estudiantes-section">
+
+        <!-- TITULO -->
+        <div class="titulo-container text-center">
+
+            <h2 class="titulo-estudiantes">
+                Estudiantes Registrados
+            </h2>
+
+            <p class="descripcion-estudiantes">
+                Consulta la información de los estudiantes que han solicitado
+                acompañamiento psicológico y revisa el estado de sus citas.
+            </p>
+
+        </div>
+
+        <!-- TARJETAS -->
+
+        <div class="row g-4">
+
+            <!-- ESTUDIANTE 1 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card estudiante-card">
+
+                    <div class="card-body">
+
+                        <h4 class="nombre-estudiante">
+                            María Gómez
+                        </h4>
+
+                        <p><strong>Grado:</strong> 10°B</p>
+
+                        <p><strong>Correo:</strong> maria@gmail.com</p>
+
+                        <p>
+                            Estudiante que solicita acompañamiento emocional
+                            relacionado con estrés académico y ansiedad.
+                        </p>
+
+                        <button class="btn btn-ver">
+                            Ver Perfil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ESTUDIANTE 2 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card estudiante-card">
+
+                    <div class="card-body">
+
+                        <h4 class="nombre-estudiante">
+                            Juan Pérez
+                        </h4>
+
+                        <p><strong>Grado:</strong> 11°A</p>
+
+                        <p><strong>Correo:</strong> juan@gmail.com</p>
+
+                        <p>
+                            Presenta dificultades de convivencia y necesita
+                            orientación psicológica y seguimiento escolar.
+                        </p>
+
+                        <button class="btn btn-ver">
+                            Ver Perfil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ESTUDIANTE 3 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card estudiante-card">
+
+                    <div class="card-body">
+
+                        <h4 class="nombre-estudiante">
+                            Sofía Ramírez
+                        </h4>
+
+                        <p><strong>Grado:</strong> 9°C</p>
+
+                        <p><strong>Correo:</strong> sofia@gmail.com</p>
+
+                        <p>
+                            Solicita apoyo emocional relacionado con autoestima
+                            y manejo de emociones dentro del entorno escolar.
+                        </p>
+
+                        <button class="btn btn-ver">
+                            Ver Perfil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
