@@ -24,22 +24,41 @@ body {
     text-align: center;
 
 }
-/* TABLA CON COLOR */
-.table-custom {
+table.table-custom {
     background-color: #f8f2fd !important;
-    border-radius: 10px;
-    overflow: hidden;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 15px rgba(122, 61, 184, 0.25) !important;
 }
 
-.table-custom thead {
-    background-color: #a85be3 !important;
-    color: white !important;
+/* ENCABEZADO */
+table.table-custom thead tr th {
+    background-color: #cfa0f3 !important;
+    color: #3d0a5e !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    border: none !important;
 }
 
-.table-custom tbody tr {
+/* FILAS */
+table.table-custom tbody tr {
+    background-color: #ffffff !important;
+}
+
+/* FILAS INTERCALADAS */
+table.table-custom tbody tr:nth-child(even) td {
     background-color: #f3e8fd !important;
 }
 
-.table-custom tbody tr:hover {
-    background-color: #e0c9f7 !important;
+/* HOVER */
+table.table-custom tbody tr:hover td {
+    background-color: #e6d4fa !important;
+}
+
+/* CELDAS */
+table.table-custom td {
+    color: #3d0a5e !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    border-color: #e0c9f7 !important;
 }
