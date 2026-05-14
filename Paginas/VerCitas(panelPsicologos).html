@@ -1,13 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Citas</title>
-    <link rel="stylesheet" href="../css_proyecto/VerCitas(panelPsicologos).css">
+    <title>Ver Estudiantes</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="../css_proyecto/VerCitas(panelPsicologos).css">
 </head>
+
 <body>
-    <h2>Ver citas</h2>
+
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container">
+
+                
+                <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
+                     alt="logo" width="120">
+
+                <div class="ms-3">
+                    <h1 class="brand-title">Psico-Agenda</h1>
+                    <p class="brand-subtitle">¡Cuidado con tu mente, cuida de ti!</p>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="navbar-nav">
+                       <li class="nav-item">
+                          <a class="nav-link" href="./iniciaPsicologo.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./serviciosPsicologos.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Historial(panelPsicologos).html">Historial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./VerCitas(panelPsicologos).html">Ver citas</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn login-btn-custom" href=".">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class=" ns my-5">
+
+        <h2 class="text-center mb-4">📋 Estudiantes con Citas Solicitadas</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-custom" id="tablaEstudiantes">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del Estudiante</th>
+                        <th>Correo</th>
+                        <th>Fecha de la Cita</th>
+                        <th>Hora</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>juanp@email.com</td>
+                        <td>20/06/2026</td>
+                        <td>10:00 AM</td>
+                        <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>María Gómez</td>
+                        <td>maria@email.com</td>
+                        <td>22/06/2026</td>
+                        <td>02:00 PM</td>
+                        <td><span class="badge bg-success">Confirmada</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+     
+    <footer class="footer">
+        <p>&copy; Psico-Agenda</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-</html>
+</html> 
