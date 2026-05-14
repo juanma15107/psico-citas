@@ -1,5 +1,5 @@
 body {
-    background-color: #e9f7ef;
+    background-color:white;
     font-family: Arial, sans-serif;
 }
 
@@ -17,4 +17,9 @@ body {
 .login-btn-custom:hover {
     background-color: #5e35b1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.ns{
+    color: #7a3db8;
+    font-weight: bold;
+    text-align: center;
 }
