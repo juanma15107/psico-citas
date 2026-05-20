@@ -19,7 +19,7 @@
 .card {
     border: 0%;
     border-radius: 15px;
-    background-color:  #fffbea;
+    background-color:  white;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px;
