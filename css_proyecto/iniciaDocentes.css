@@ -1,77 +1,147 @@
+/* ===== GENERAL ===== */
+
 body {
-    background-color: #e9f7ef;
+    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.custom-navbar {
-    background-color: #cfa0f3 !important;
-    padding: 10px 50px;
+/* ===== NAVBAR ===== */
+
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
 }
 
-.Tl {
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.3rem;
     font-weight: bold;
-    font-family: Arial, sans-serif;
-    color:  #7a3db8;
-}
-
-
-
-.brand-title {
     color: #7a3db8;
-    font-weight: bold;
-    text-align: center;
+    margin: 0;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
 }
 
 .nav-link {
-    color: #3d0a5e !important;
+    color: #3d0a5e;
     font-weight: 500;
-    margin: 0 10px;
+    margin-left: 10px;
 }
 
-.login-btn-custom:hover {
-    background-color: #5e35b1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.nav-link:hover {
+    color: #7a3db8;
 }
 
-.custom-card {
-    border-radius: 15px;
-    transition: transform 0.2s;
-    background-color: #ffffff;
+.btn-logout {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
 }
 
-.custom-card:hover {
-    transform: translateY(-5px);
+.btn-logout:hover {
+    background-color: #8f4fd8;
+    color: white;
 }
 
-.container mt-5{
+/* ===== CONTENIDO ===== */
+
+.teacher-section {
+    flex: 1;
+    padding: 70px 20px;
+}
+
+.teacher-header {
     margin-bottom: 50px;
 }
 
-.foto-1{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
+.teacher-title {
+    font-size: 2.5rem;
+    color: #4b007d;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
-.card {
-    border: none;
+
+.teacher-text {
+    max-width: 700px;
+    margin: auto;
+    color: #6d5b7c;
+    line-height: 1.7;
+}
+
+/* ===== TARJETAS ===== */
+
+.teacher-card {
+    background-color: white;
+    border: 1px solid #e2d5ea;
     border-radius: 15px;
-    background-color: #fffbea;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px;
+    padding: 25px;
     height: 100%;
 }
 
-footer{
-    text-align:center;
-    display: flex;
-    flex-direction: column;
-    min-height: 108px;
-    color:#3d0a5e;
-    background-color:#d9c5e6;
-    justify-content: center;
+.card-title {
+    color: #7a3db8;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
+/* ===== IMAGEN ===== */
+
+.teacher-image {
+    width: 240px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.1rem;
+    }
+
+    .teacher-title {
+        font-size: 2rem;
+    }
+
+    .teacher-image {
+        width: 180px;
+        margin-top: 20px;
+    }
+
+}

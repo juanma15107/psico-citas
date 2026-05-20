@@ -1,3 +1,5 @@
+/* ===== GENERAL ===== */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,125 +7,154 @@ body {
     color: #3d0a5e;
 }
 
+/* ===== NAVBAR ===== */
 
-.encabezado {
-    background-color: #d9c5e6;
-    text-align: center;
-    padding: 15px;
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
 }
 
-.boton {
-    background-color: #a85be3;
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
+.logo {
+    width: 75px;
 }
 
-
-main {
-    text-align: center;
-    padding: 30px;
+.logo-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
 }
 
-h2 {
-    color: #4b007d;
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
 }
 
-.redes {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-.card {
-    border: none;
-    border-radius: 15px;
-    background-color: #fffbea;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px;
-    height: 100%;
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+    margin-left: 10px;
 }
 
-
-.tarjeta {
-    background-color: #fffbea;
-    padding: 20px;
-    width: 250px;
-}
-
-.tarjeta h3 {
+.nav-link:hover {
     color: #7a3db8;
 }
 
-.tarjeta a {
+.btn-login {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-login:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+/* ===== CONTENIDO ===== */
+
+.contact-section {
+    padding: 70px 20px;
+}
+
+.contact-header {
+    margin-bottom: 50px;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    color: #4b007d;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-text {
+    max-width: 750px;
+    margin: auto;
+    color: #6d5b7c;
+    line-height: 1.7;
+}
+
+/* ===== TARJETAS ===== */
+
+.contact-card {
+    background-color: white;
+    border: 1px solid #e2d5ea;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+}
+
+.card-title {
+    color: #7a3db8;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+}
+
+.contact-list a {
     text-decoration: none;
     color: #6d2da8;
 }
 
-.tarjeta a:hover {
+.contact-list a:hover {
     text-decoration: underline;
 }
 
-html {
-    height: 100%;
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: 40px;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
-
-.custom-navbar {
-    background-color: #eadcf0;
-}
-
-.brand-title {
-    color: #7a3db8;
+.footer-title {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.brand-subtitle {
-    color: #7b5b8d;
-}
-
-.nav-link {
-    color: #2f1a3b ;
-}
-
-.nav-link:hover {
-    color: #8f4fd8;
-    text-decoration: underline;
-}
-
-.login-btn {
-    background-color: #a85be3;
-    color: white;
-    border-radius: 20px;
-    padding: 8px 15px;
-}
-a{
+.footer-link {
+    color: #6d2da8;
     text-decoration: none;
-    color:#6d2da8
-
-}
-.contactanos{
-    font-weight: bold;
-    color: rgb(122, 61, 184);
+    margin: 0 10px;
 }
 
-footer{
-    text-align:center;
-    display: flex;
-    flex-direction: column;
-    min-height: 108px;
-    color:#3d0a5e;
-    background-color:#d9c5e6;
-    justify-content: center;
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.2rem;
+    }
+
+    .contact-text {
+        font-size: 0.95rem;
+    }
+
 }

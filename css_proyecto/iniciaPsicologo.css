@@ -1,67 +1,147 @@
-body {
-    background-color: #e9f7ef;
-font-family: Arial, sans-serif;}
+/* ===== GENERAL ===== */
 
-.custom-navbar {
-    background-color: #cfa0f3 !important; /* Morado claro del fondo */
-    padding: 10px 50px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.tl{
-    color: #7a3db8;
+
+/* ===== NAVBAR ===== */
+
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.3rem;
     font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
 }
-.card-amarilla {
-    background-color: #fffbea;
-    border: none;
+
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
+}
+
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #7a3db8;
+}
+
+.btn-logout {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-logout:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+/* ===== CONTENIDO ===== */
+
+.psychologist-section {
+    flex: 1;
+    padding: 70px 20px;
+}
+
+.psychologist-header {
+    margin-bottom: 50px;
+}
+
+.psychologist-title {
+    font-size: 2.5rem;
+    color: #4b007d;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.psychologist-text {
+    max-width: 700px;
+    margin: auto;
+    color: #6d5b7c;
+    line-height: 1.7;
+}
+
+/* ===== TARJETAS ===== */
+
+.psychologist-card {
+    background-color: white;
+    border: 1px solid #e2d5ea;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 25px;
     height: 100%;
 }
 
-
-.nav-link {
-    color: #3d0a5e !important;
-    font-weight: 500;
-    margin: 0 10px;
-}
-
-.login-btn-custom:hover {
-    background-color: #5e35b1;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.custom-card {
-    border-radius: 15px;
-    transition: transform 0.2s;
-    background-color: #ffffff;
-}
-
-.custom-card:hover {
-    transform: translateY(-5px);
-}
-
-h2 {
+.card-title {
+    color: #7a3db8;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: #3d0a5e;
 }
 
-.foto-1{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+/* ===== IMAGEN ===== */
+
+.psychologist-image {
+    width: 240px;
+    max-width: 100%;
     border-radius: 50%;
-    display: block;
-    margin: 0 auto;
+    object-fit: cover;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-footer{
-    text-align:center;
-    display: flex;
-    flex-direction: column;
-    min-height: 108px;
-    color:#3d0a5e;
-    background-color:#d9c5e6;
-    justify-content: center;
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.1rem;
+    }
+
+    .psychologist-title {
+        font-size: 2rem;
+    }
+
+    .psychologist-image {
+        width: 180px;
+        margin-top: 20px;
+    }
+
 }

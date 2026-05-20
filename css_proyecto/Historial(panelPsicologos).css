@@ -1,0 +1,88 @@
+body {
+    background-color: #e9f7ef;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.custom-navbar {
+    background-color: #cfa0f3 !important;
+    padding: 10px 50px;
+}
+
+.nav-link {
+    color: #3d0a5e !important;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.login-btn-custom {
+    background-color: #7e57c2;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 18px;
+}
+
+.login-btn-custom:hover {
+    background-color: #5e35b1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTENIDO */
+
+.historial-section {
+    padding: 70px 20px;
+}
+
+.titulo-historial {
+    color: #5e35b1;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.descripcion-historial {
+    color: #555;
+    font-size: 18px;
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* TARJETAS */
+
+.historial-card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.historial-card:hover {
+    transform: translateY(-5px);
+}
+
+.historial-card h4 {
+    color: #5e35b1;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.historial-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* FECHA */
+
+.fecha-box {
+    background-color: #f3e5f5;
+    color: #5e35b1;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
