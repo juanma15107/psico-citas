@@ -3,7 +3,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* NAVBAR */
 
 .custom-navbar {
     background-color: #cfa0f3 !important;
@@ -28,7 +27,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* CONTENIDO */
 
 .historial-section {
     padding: 70px 20px;
@@ -49,7 +47,6 @@ body {
     line-height: 1.8;
 }
 
-/* TARJETAS */
 
 .historial-card {
     background-color: white;
@@ -76,7 +73,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* FECHA */
 
 .fecha-box {
     background-color: #f3e5f5;
