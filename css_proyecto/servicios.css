@@ -1,5 +1,3 @@
-/* ===== GENERAL ===== */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,7 +5,6 @@ body {
     color: #3d0a5e;
 }
 
-/* ===== NAVBAR ===== */
 
 .navbar-custom {
     background-color: #eadcf0;
@@ -54,7 +51,6 @@ body {
     color: white;
 }
 
-/* ===== SERVICIOS ===== */
 
 .services-section {
     padding: 70px 20px;
@@ -78,7 +74,6 @@ body {
     line-height: 1.7;
 }
 
-/* ===== TARJETAS ===== */
 
 .service-card {
     background-color: white;
@@ -95,7 +90,6 @@ body {
     font-weight: bold;
 }
 
-/* ===== FOOTER ===== */
 
 .footer {
     background-color: #d9c5e6;
@@ -118,7 +112,6 @@ body {
     text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px) {
 
