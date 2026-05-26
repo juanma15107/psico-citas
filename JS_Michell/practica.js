@@ -3,12 +3,24 @@
 //const no cambia
 
 console.log ("hola");
-const user = 
+const user = [
 {
     "email": "admin@admin.com",
     "password": "admin123",
     "user": "admin"
+},
+{
+    "email": "estu@estu.com",
+    "password": "es123",
+    "user": "estudiante"
+},
+{
+    "email": "admin@maes.com",
+    "password": "maes123",
+    "user": "maestro"
 }
+]
+
 
 const formulario = document.getElementById("iniciarsesion");
 

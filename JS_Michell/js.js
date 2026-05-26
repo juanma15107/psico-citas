@@ -19,11 +19,14 @@ const user = [
 
 function iniciodeSesion (email, password){
     for (let index = 0 ; index < user.length; index++){
-        
-    Console.log ("index", index);
-    Console.log ("elemento", element.email);
-    Console.log ("", index);
-    Console.log ("index", index);
-
+    const elemet = user [index];
+    if (element.email === email && element.password === password){
+        alert("encontrado");
+        sessionStorage.setItem("user",elemet.user);
+        break;
     }
+    alert("no encontrado");
+    }
+    formulario = document.getElementById('formulario');
+ 
 }
