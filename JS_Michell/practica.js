@@ -3,11 +3,13 @@
 //const no cambia
 
 console.log ("hola");
-const user = {
+const user = 
+{
     "email": "admin@admin.com",
     "password": "admin123",
     "user": "admin"
-};
+}
+
 const formulario = document.getElementById("iniciarsesion");
 
  formulario.addEventListener("submit",function(event){
