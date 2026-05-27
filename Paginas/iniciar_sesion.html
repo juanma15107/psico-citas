@@ -99,7 +99,7 @@
                 <div class="mb-3">
 
                     <input type="email"
-                    id="email"
+                    id="email" name="correo"
                         class="form-control input-custom"
                         placeholder="Correo Institucional">
 
@@ -108,7 +108,7 @@
                 <div class="mb-3">
 
                     <input type="password"
-                    id="password"
+                    id="password" name="cont"
                         class="form-control input-custom"
                         placeholder="Contraseña">
 
@@ -116,21 +116,21 @@
 
                 <div class="mb-4">
 
-                    <select class="form-select input-custom">
+                    <select class="form-select input-custom" name="rol">
 
                         <option selected disabled>
                             Selecciona tu rol
                         </option>
 
-                        <option>
+                        <option value="Estudiante">
                             Estudiante
                         </option>
 
-                        <option>
+                        <option value="Docente">
                             Docente
                         </option>
 
-                        <option>
+                        <option value="Psicologo">
                             Psicólogo
                         </option>
 
@@ -139,9 +139,7 @@
                 </div>
 
                 <button type="submit" class="btn submit-button w-100" >
-
                     Ingresar
-
                 </button>
 
             </form>
@@ -161,7 +159,7 @@
         </p>
 
     </footer>
-    <script src="../JS_Gimena/iniciar_sesion.js"></script>
+    <script src="../JS_Gimena/inicio_sesion.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
