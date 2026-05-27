@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
+}
+
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #7a3db8;
+}
+
+.btn-logout {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-logout:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+.cita-section {
+    flex: 1;
+    padding: 70px 20px;
+}
+
+.titulo-cita {
+    color: #4b007d;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.texto-cita {
+    color: #6d5b7c;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background-color: white;
+    border: 1px solid #e2d5ea;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-box h5 {
+    color: #7a3db8;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.info-box li {
+    color: #6d5b7c;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.formulario-cita {
+    background-color: white;
+    border: 1px solid #e2d5ea;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.formulario-cita h3 {
+    color: #7a3db8;
+    font-weight: bold;
+}
+
+.form-label {
+    color: #5f4b6d;
+    font-weight: 600;
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #d8c4e4;
+}
+
+.form-control:focus {
+    border-color: #a85be3;
+    box-shadow: 0 0 5px rgba(168, 91, 227, 0.3);
+}
+
+.btn-cita {
+    background-color: #a85be3;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cita:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.1rem;
+    }
+
+    .titulo-cita {
+        font-size: 2rem;
+    }
+
+    .formulario-cita {
+        padding: 30px 20px;
+    }
+
+}

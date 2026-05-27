@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
+}
+
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #7a3db8;
+}
+
+.btn-logout {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-logout:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+.citas-section {
+    flex: 1;
+    padding: 70px 20px;
+}
+
+.citas-header {
+    margin-bottom: 50px;
+}
+
+.citas-title {
+    font-size: 2.5rem;
+    color: #4b007d;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.citas-text {
+    max-width: 750px;
+    margin: auto;
+    color: #6d5b7c;
+    line-height: 1.7;
+}
+
+.table-custom {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e2d5ea;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.table-custom thead {
+    background-color: #d9c5e6;
+}
+
+.table-custom thead th {
+    color: #4b007d;
+    font-weight: bold;
+    text-align: center;
+    padding: 18px;
+    border: none;
+}
+
+.table-custom tbody td {
+    text-align: center;
+    padding: 18px;
+    color: #5f4b6d;
+    border-color: #eee3f5;
+}
+
+.table-custom tbody tr:nth-child(even) {
+    background-color: #faf6fd;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f3e9fb;
+}
+
+.estado {
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.pendiente {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.confirmada {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.finalizada {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.1rem;
+    }
+
+    .citas-title {
+        font-size: 2rem;
+    }
+
+    .table-custom {
+        font-size: 0.9rem;
+    }
+
+}
