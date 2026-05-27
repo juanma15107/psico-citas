@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+}
+
+
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
+}
+
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #7a3db8;
+}
+
+.btn-login {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-login:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+
+.hero {
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    color: #4b007d;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: #6d5b7c;
+    line-height: 1.7;
+}
+
+.hero-button {
+    background-color: #a85be3;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.hero-button:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: 40px;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-link {
+    color: #6d2da8;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+}
