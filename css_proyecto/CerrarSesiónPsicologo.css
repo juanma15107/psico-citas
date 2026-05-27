@@ -31,7 +31,29 @@ body {
     color: #6d5b7c;
 }
 
-.logout-section {
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #7a3db8;
+}
+
+.btn-logout {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-logout:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+.cerrar-section {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -39,62 +61,63 @@ body {
     padding: 60px 20px;
 }
 
-.logout-card {
+.cerrar-card {
     background-color: white;
     border: 1px solid #e2d5ea;
-    border-radius: 25px;
-    padding: 50px 40px;
-    max-width: 650px;
+    border-radius: 20px;
+    padding: 45px 35px;
+    max-width: 500px;
     width: 100%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.logout-title {
+.cerrar-imagen {
+    width: 130px;
+    margin-bottom: 25px;
+}
+
+.cerrar-title {
     color: #4b007d;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.logout-text {
+.cerrar-text {
     color: #6d5b7c;
-    line-height: 1.8;
-    margin-bottom: 35px;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
-.logout-image {
-    width: 180px;
-    max-width: 100%;
-    border-radius: 50%;
-    margin-bottom: 35px;
-    object-fit: cover;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .btn-cancelar {
-    background-color: #d9c5e6;
+    background-color: #d8c4e4;
     color: #4b007d;
-    border-radius: 15px;
-    padding: 12px 28px;
+    padding: 10px 22px;
+    border-radius: 12px;
     font-weight: bold;
-    border: none;
 }
 
 .btn-cancelar:hover {
-    background-color: #ccb1dd;
+    background-color: #c9addb;
     color: #4b007d;
 }
 
-.btn-cerrar {
+.btn-salir {
     background-color: #a85be3;
     color: white;
-    border-radius: 15px;
-    padding: 12px 28px;
+    padding: 10px 22px;
+    border-radius: 12px;
     font-weight: bold;
-    border: none;
 }
 
-.btn-cerrar:hover {
+.btn-salir:hover {
     background-color: #8f4fd8;
     color: white;
 }
@@ -120,16 +143,12 @@ body {
         font-size: 1.1rem;
     }
 
-    .logout-title {
-        font-size: 2rem;
+    .cerrar-title {
+        font-size: 1.7rem;
     }
 
-    .logout-card {
-        padding: 40px 25px;
-    }
-
-    .logout-image {
-        width: 140px;
+    .cerrar-card {
+        padding: 35px 25px;
     }
 
 }
