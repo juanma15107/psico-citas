@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
+}
+
+.logout-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.logout-card {
+    background-color: white;
+    border: 1px solid #e2d5ea;
+    border-radius: 25px;
+    padding: 50px 40px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logout-title {
+    color: #4b007d;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.logout-text {
+    color: #6d5b7c;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.logout-image {
+    width: 180px;
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 35px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn-cancelar {
+    background-color: #d9c5e6;
+    color: #4b007d;
+    border-radius: 15px;
+    padding: 12px 28px;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-cancelar:hover {
+    background-color: #ccb1dd;
+    color: #4b007d;
+}
+
+.btn-cerrar {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 15px;
+    padding: 12px 28px;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-cerrar:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.1rem;
+    }
+
+    .logout-title {
+        font-size: 2rem;
+    }
+
+    .logout-card {
+        padding: 40px 25px;
+    }
+
+    .logout-image {
+        width: 140px;
+    }
+
+}

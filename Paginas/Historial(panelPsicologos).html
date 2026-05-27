@@ -2,185 +2,214 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Historial</title>
+    <title>
+        Historial - Psico-Agenda
+    </title>
 
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css_proyecto/Historial(panelPsicologos).css">
 
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-   
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
 
-    <header>
-        <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
 
-            <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
 
-               
+                <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
+                    alt="Logo"
+                    class="logo">
+
                 <div>
-                    <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
-                        alt="logo" width="150px">
-                </div>
 
-               
-                <div>
-                    <h1 class="brand-title">Psico-Agenda</h1>
-                    <p class="brand-subtitle">
-                        ¡Cuidado con tu mente, cuida de ti!
+                    <h1 class="logo-title">
+                        Panel del Psicólogo
+                    </h1>
+
+                    <p class="logo-text">
+                        Psico-Agenda
                     </p>
-                </div>
-
-               
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
-
-                    <span class="navbar-toggler-icon"></span>
-
-                </button>
-
-               
-                <div class="collapse navbar-collapse justify-content-end" id="menu">
-
-                    <ul class="navbar-nav">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./iniciaPsicologo.html">
-                                Inicio
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./serviciosPsicologo.html">
-                                Servicios
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./agenda(panelPsicologo).html">
-                                Agenda
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                href="./historial(panelPsicologo).html">
-
-                                Historial
-                            </a>
-                        </li>
-
-                        <li class="nav-item ms-lg-3">
-
-                            <a class="btn login-btn-custom" href=".">
-                                Cerrar Sesión
-                            </a>
-
-                        </li>
-
-                    </ul>
 
                 </div>
+
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                            href="./iniciaPsicologo.html">
+
+                            Inicio
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                            href="./serviciosPsicologos.html">
+
+                            Servicios
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                            href="./Historial(panelPsicologos).html">
+
+                            Historial
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                            href="./VerCitas(panelPsicologos).html">
+
+                            Ver Citas
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a class="btn btn-logout"
+                            href="./CerrarSesiónPsicologo.html">
+
+                            Cerrar Sesión
+
+                        </a>
+
+                    </li>
+
+                </ul>
 
             </div>
 
-        </nav>
-    </header>
+        </div>
 
-    
+    </nav>
 
-    <section class="container historial-section">
+    <main class="container historial-section">
 
-        
+        <div class="historial-header text-center">
 
-        <div class="text-center mb-5">
-
-            <h2 class="titulo-historial">
+            <h2 class="historial-title">
                 Historial de Acompañamientos
             </h2>
 
-            <p class="descripcion-historial">
+            <p class="historial-text">
 
-                Consulta el registro de citas, seguimientos e intervenciones
-                psicológicas realizadas con los estudiantes y docentes.
+                Consulta el registro de seguimientos,
+                intervenciones psicológicas y procesos
+                realizados con estudiantes dentro de la institución.
 
             </p>
 
         </div>
 
-       
-
         <div class="row g-4">
-
-           
 
             <div class="col-lg-4 col-md-6">
 
                 <div class="historial-card">
 
-                    <h4>
+                    <h4 class="student-name">
                         María Gómez
                     </h4>
 
                     <p>
-                        Se realizó acompañamiento emocional relacionado
-                        con ansiedad académica y manejo del estrés escolar.
+
+                        Se realizó acompañamiento emocional
+                        enfocado en ansiedad académica y
+                        manejo del estrés escolar.
+
                     </p>
 
                     <div class="fecha-box">
+
                         Fecha: 10 Mayo 2026
+
                     </div>
 
                 </div>
 
             </div>
 
-            
-
             <div class="col-lg-4 col-md-6">
 
                 <div class="historial-card">
 
-                    <h4>
+                    <h4 class="student-name">
                         Juan Pérez
                     </h4>
 
                     <p>
-                        Seguimiento grupal realizado para mejorar la
-                        convivencia y comunicación dentro del aula.
+
+                        Seguimiento grupal orientado a mejorar
+                        la convivencia y la comunicación
+                        dentro del entorno escolar.
+
                     </p>
 
                     <div class="fecha-box">
+
                         Fecha: 14 Mayo 2026
+
                     </div>
 
                 </div>
 
             </div>
 
-            
-
             <div class="col-lg-4 col-md-6">
 
                 <div class="historial-card">
 
-                    <h4>
+                    <h4 class="student-name">
                         Sofía Ramírez
                     </h4>
 
                     <p>
-                        Intervención enfocada en autoestima, manejo
-                        emocional y fortalecimiento personal.
+
+                        Intervención psicológica enfocada en
+                        autoestima, fortalecimiento emocional
+                        y manejo de emociones.
+
                     </p>
 
                     <div class="fecha-box">
+
                         Fecha: 18 Mayo 2026
+
                     </div>
 
                 </div>
@@ -189,11 +218,21 @@
 
         </div>
 
-    </section>
+    </main>
 
-   
+    <footer class="footer text-center">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <p class="footer-title">
+            &copy; Psico-Agenda
+        </p>
+
+        <p>
+            Cra. 50B #97a-30, Santa Cruz, Medellín
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
