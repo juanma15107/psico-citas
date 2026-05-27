@@ -8,7 +8,6 @@ body {
     min-height: 100vh;
 }
 
-
 .navbar-custom {
     background-color: #eadcf0;
     padding: 12px 0;
@@ -54,56 +53,74 @@ body {
     color: white;
 }
 
-
-.student-section {
+.cerrar-section {
     flex: 1;
-    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
 }
 
-.student-header {
-    margin-bottom: 50px;
-}
-
-.student-title {
-    font-size: 2.5rem;
-    color: #4b007d;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.student-text {
-    max-width: 700px;
-    margin: auto;
-    color: #6d5b7c;
-    line-height: 1.7;
-}
-
-
-.student-card {
+.cerrar-card {
     background-color: white;
     border: 1px solid #e2d5ea;
-    border-radius: 15px;
-    padding: 25px;
-    height: 100%;
+    border-radius: 20px;
+    padding: 45px 35px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.card-title {
-    color: #7a3db8;
-    font-size: 1.2rem;
+.cerrar-imagen {
+    width: 130px;
+    margin-bottom: 25px;
+}
+
+.cerrar-title {
+    color: #4b007d;
+    font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 15px;
+}
+
+.cerrar-text {
+    color: #6d5b7c;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-cancelar {
+    background-color: #d8c4e4;
+    color: #4b007d;
+    padding: 10px 22px;
+    border-radius: 12px;
     font-weight: bold;
 }
 
-
-.student-image {
-    width: 240px;
-    max-width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.btn-cancelar:hover {
+    background-color: #c9addb;
+    color: #4b007d;
 }
 
+.btn-salir {
+    background-color: #a85be3;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.btn-salir:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
 
 .footer {
     background-color: #d9c5e6;
@@ -116,7 +133,6 @@ body {
     margin-bottom: 5px;
 }
 
-
 @media (max-width: 768px) {
 
     .logo {
@@ -127,13 +143,12 @@ body {
         font-size: 1.1rem;
     }
 
-    .student-title {
-        font-size: 2rem;
+    .cerrar-title {
+        font-size: 1.7rem;
     }
 
-    .student-image {
-        width: 180px;
-        margin-top: 20px;
+    .cerrar-card {
+        padding: 35px 25px;
     }
 
 }

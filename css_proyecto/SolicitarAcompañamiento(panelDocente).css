@@ -9,6 +9,7 @@ body {
 }
 
 
+
 .navbar-custom {
     background-color: #eadcf0;
     padding: 12px 0;
@@ -55,54 +56,99 @@ body {
 }
 
 
-.student-section {
+
+.cita-section {
     flex: 1;
     padding: 70px 20px;
 }
 
-.student-header {
-    margin-bottom: 50px;
-}
-
-.student-title {
-    font-size: 2.5rem;
+.titulo-cita {
     color: #4b007d;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.student-text {
-    max-width: 700px;
-    margin: auto;
+.texto-cita {
     color: #6d5b7c;
-    line-height: 1.7;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 
-.student-card {
+
+.info-box {
     background-color: white;
     border: 1px solid #e2d5ea;
     border-radius: 15px;
     padding: 25px;
-    height: 100%;
 }
 
-.card-title {
+.info-box h5 {
     color: #7a3db8;
-    font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 15px;
+}
+
+.info-box ul {
+    padding-left: 20px;
+}
+
+.info-box li {
+    margin-bottom: 12px;
+    color: #5f4b6d;
+    line-height: 1.6;
+}
+
+
+
+.formulario-cita {
+    background-color: white;
+    border: 1px solid #e2d5ea;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.formulario-cita h3 {
+    color: #7a3db8;
     font-weight: bold;
 }
 
 
-.student-image {
-    width: 240px;
-    max-width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.form-label {
+    color: #5f4b6d;
+    font-weight: 600;
 }
+
+.form-control {
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #d8c4e4;
+}
+
+.form-control:focus {
+    border-color: #a85be3;
+    box-shadow: 0 0 5px rgba(168, 91, 227, 0.3);
+}
+
+
+
+.btn-cita {
+    background-color: #a85be3;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cita:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
 
 
 .footer {
@@ -117,6 +163,7 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
 
     .logo {
@@ -127,13 +174,12 @@ body {
         font-size: 1.1rem;
     }
 
-    .student-title {
+    .titulo-cita {
         font-size: 2rem;
     }
 
-    .student-image {
-        width: 180px;
-        margin-top: 20px;
+    .formulario-cita {
+        padding: 25px;
     }
 
 }
