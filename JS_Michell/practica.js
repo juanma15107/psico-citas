@@ -5,19 +5,24 @@
 console.log ("hola");
 const user = [
 {
-    "email": "admin@admin.com",
-    "password": "admin123",
+    "email": "admin@adm.com",
+    "password": "adm123",
     "user": "admin"
 },
 {
-    "email": "estu@estu.com",
-    "password": "es123",
+    "email": "estudiante@est.com",
+    "password": "est123",
     "user": "estudiante"
 },
 {
-    "email": "admin@maes.com",
-    "password": "maes123",
+    "email": "maestro@mae.com",
+    "password": "mae123",
     "user": "maestro"
+},
+ {
+    "email": "psicologo@psi.com",
+    "password": "psi123",
+    "user": "psicologo"
 }
 ]
 
@@ -32,15 +37,21 @@ const formulario = document.getElementById("iniciarsesion");
 
  //=== por seguridad
 
- if (user.email === email && user.password === password){
+ let usuarioEncontrado = usuarios.find(u => u.email === emailInput && u.password === passwordImput);
 
-    sessionStorage.setItem("user",user.user);
+ if (usuarioEncontrado){
+    sessionStorage.setItem("userRole", usuarioEncontrado.role);
 
-  return alert("usuario encontrado");
-  window.location.href="serviciosPsicologo.html"
- }
- return alert ("usuario no encontrado");
- console.log ("engtre");
+    if(usuarioEncontrado.role === "admin"){
+      window.location.href = "admininicioo.html";
+    } else if (usuarioEncontrado.role === "estudiante"){
+      window.location.href = "iniciaEstudiantes.html";
+    }
+    return;
+}
+
+formulario.reset();
+alert("usuario no encntrado");
 
  //local storage se tiene que limpiar la memoria para que se borre la info
  //sesion storage mientras la navegacion esta activa so se cierra se borra todo automaticamente
