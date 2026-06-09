@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Docente - Psico-Agenda</title>
-
+    <title>Panel Administrador - Psico-Agenda</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css_proyecto/iniciaDocentes.css">
+    <link rel="stylesheet" href="../css_proyecto/iniciaAdministrador.css">
 </head>
 
 <body>
 
     <script>
 
-        if (localStorage.getItem("rol") !== "docente") {
+        if (localStorage.getItem("rol") !== "administrador") {
 
             window.location.href = "./Iniciar_sesion.html";
 
@@ -24,11 +23,9 @@
 
     </script>
 
-
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
 
         <div class="container">
-
 
             <a class="navbar-brand d-flex align-items-center gap-3" href="#">
 
@@ -36,50 +33,46 @@
                     alt="Logo" class="logo">
 
                 <div>
-                    <h1 class="logo-title">Panel del Docente</h1>
+                    <h1 class="logo-title">Panel Administrador</h1>
                     <p class="logo-text">Psico-Agenda</p>
                 </div>
 
             </a>
 
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-
                 <span class="navbar-toggler-icon"></span>
-
             </button>
-
 
             <div class="collapse navbar-collapse justify-content-end" id="menu">
 
                 <ul class="navbar-nav align-items-lg-center">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="./iniciaDocentes.html">
+                        <a class="nav-link active" href="./iniciaAdministrador.html">
                             Inicio
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./serviciosDocente.html">
-                            Servicios
+                        <a class="nav-link" href="./gestionarUsuarios(panelAdministrador).html">
+                            Gestionar Usuarios
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./SolicitarAcompañamiento(panelDocente).html">
-                            Solicitar Acompañamiento
+                        <a class="nav-link" href="./reportes(panelAdministrador).html">
+                            Reportes
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./verEstudiantes(panelDocente).html">
-                            Ver Estudiantes
+                        <a class="nav-link" href="./configuracion(panelAdministrador).html">
+                            Configuración
                         </a>
                     </li>
 
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-logout" href="../Paginas/CerrarSesiónDocentes.html">
+                        <a class="btn btn-logout" href="./CerrarSesionAdministrador.html">
                             Cerrar Sesión
                         </a>
                     </li>
@@ -92,25 +85,23 @@
 
     </nav>
 
-
     <main class="container teacher-section">
 
         <div class="teacher-header text-center">
 
             <h2 class="teacher-title">
-                Bienvenido Docente
+                Bienvenido Administrador
             </h2>
 
             <p class="teacher-text">
 
-                Desde este panel podrás gestionar acompañamientos,
-                consultar información estudiantil y fortalecer el
-                seguimiento académico y convivencial.
+                Desde este panel podrás gestionar usuarios, supervisar la
+                información de la plataforma, generar reportes y administrar
+                el correcto funcionamiento de Psico-Agenda.
 
             </p>
 
         </div>
-
 
         <div class="row g-4 align-items-center">
 
@@ -119,14 +110,14 @@
                 <div class="teacher-card">
 
                     <h3 class="card-title">
-                        Ver Estudiantes
+                        Gestionar Usuarios
                     </h3>
 
                     <p>
 
-                        Consulta información relacionada con los estudiantes
-                        para facilitar el seguimiento académico y convivencial,
-                        permitiendo identificar situaciones que requieran apoyo.
+                        Administra las cuentas de estudiantes, docentes y
+                        psicólogos, permitiendo crear, editar o desactivar
+                        usuarios según sea necesario.
 
                     </p>
 
@@ -139,14 +130,14 @@
                 <div class="teacher-card">
 
                     <h3 class="card-title">
-                        Solicitar Acompañamiento
+                        Reportes y Estadísticas
                     </h3>
 
                     <p>
 
-                        Solicita apoyo psicológico para grupos o salones,
-                        permitiendo mejorar la convivencia, la comunicación
-                        y el ambiente escolar dentro del aula.
+                        Consulta información relevante sobre el uso de la
+                        plataforma, solicitudes realizadas y seguimiento
+                        institucional para apoyar la toma de decisiones.
 
                     </p>
 
@@ -156,7 +147,7 @@
 
             <div class="col-md-4 text-center">
 
-                <img src="../imagenes/docentes.png" alt="Docente" class="teacher-image">
+                <img src="../imagenes/" alt="Administrador" class="teacher-image">
 
             </div>
 
@@ -175,7 +166,6 @@
         </p>
 
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

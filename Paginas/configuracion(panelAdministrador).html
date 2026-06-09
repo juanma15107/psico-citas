@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configuración - Psico-Agenda</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css_proyecto/configuracion(panelAdministrador).css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+
+                <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
+                    alt="Logo"
+                    class="logo">
+
+                <div>
+
+                    <h1 class="logo-title">Panel Administrador</h1>
+                    <p class="logo-text">Psico-Agenda</p>
+
+                </div>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./iniciaAdministrador.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gestionarUsuarios(panelAdministrador).html">
+                            Gestionar Usuarios
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./reportes(panelAdministrador).html">
+                            Reportes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./configuracion(panelAdministrador).html">
+                            Configuración
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a class="btn btn-logout" href="./CerrarSesionAdministrador.html">
+                            Cerrar Sesión
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="page-title">
+                Configuración
+            </h2>
+
+            <p class="page-text">
+                Administra las opciones generales de Psico-Agenda y accede a las herramientas de gestión del sistema.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="settings-card">
+
+                    <h4>Gestión de Cuentas</h4>
+
+                    <a href="./gestionUsuarios.html" class="setting-link">
+                        Administrar Usuarios
+                    </a>
+
+                    <a href="./crearUsuario.html" class="setting-link">
+                        Crear Usuario
+                    </a>
+
+                    <a href="./rolesPermisos.html" class="setting-link">
+                        Roles y Permisos
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="settings-card">
+
+                    <h4>Seguridad</h4>
+
+                    <a href="./cambiarPassword.html" class="setting-link">
+                        Cambiar Contraseña
+                    </a>
+
+                    <a href="./configuracionAcceso.html" class="setting-link">
+                        Configuración de Acceso
+                    </a>
+
+                    <a href="./registroActividad.html" class="setting-link">
+                        Registro de Actividad
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="settings-card">
+
+                    <h4>Gestión Académica</h4>
+
+                    <a href="./estudiantesAdmin.html" class="setting-link">
+                        Administrar Estudiantes
+                    </a>
+
+                    <a href="./docentesAdmin.html" class="setting-link">
+                        Administrar Docentes
+                    </a>
+
+                    <a href="./psicologosAdmin.html" class="setting-link">
+                        Administrar Psicólogos
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="settings-card">
+
+                    <h4>Solicitudes y Seguimiento</h4>
+
+                    <a href="./solicitudes.html" class="setting-link">
+                        Ver Solicitudes
+                    </a>
+
+                    <a href="./acompanamientos.html" class="setting-link">
+                        Historial de Acompañamientos
+                    </a>
+
+                    <a href="./seguimiento.html" class="setting-link">
+                        Seguimiento de Casos
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="settings-card">
+
+                    <h4>Información Institucional</h4>
+
+                    <a href="./datosInstitucion.html" class="setting-link">
+                        Datos de la Institución
+                    </a>
+
+                    <a href="./contacto.html" class="setting-link">
+                        Información de Contacto
+                    </a>
+
+                    <a href="./sistema.html" class="setting-link">
+                        Configuración del Sistema
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="settings-card">
+
+                    <h4>Reportes</h4>
+
+                    <a href="./reportes.html" class="setting-link">
+                        Estadísticas Generales
+                    </a>
+
+                    <a href="./exportarReportes.html" class="setting-link">
+                        Exportar Reportes
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
