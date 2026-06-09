@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Psico-Agenda</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css_proyecto/reporte(panelAdministrador).css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+
+                <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
+                    alt="Logo"
+                    class="logo">
+
+                <div>
+                    <h1 class="logo-title">Panel Administrador</h1>
+                    <p class="logo-text">Psico-Agenda</p>
+                </div>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./iniciaAdministrador.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gestionarUsuarios(panelAdministrador).html">Gestionar Usuarios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./reportes(panelAdministrador).html">Reportes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./configuracion(panelAdministrador).html">Configuración</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-logout" href="./CerrarSesionAdministrador.html">
+                            Cerrar Sesión
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="page-title">
+                Reportes y Estadísticas
+            </h2>
+
+            <p class="page-text">
+                Consulta información general sobre el uso de la plataforma Psico-Agenda.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-md-3">
+                <div class="report-card">
+                    <h3>120</h3>
+                    <p>Estudiantes</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="report-card">
+                    <h3>18</h3>
+                    <p>Docentes</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="report-card">
+                    <h3>4</h3>
+                    <p>Psicólogos</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="report-card">
+                    <h3>35</h3>
+                    <p>Solicitudes</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-hover custom-table">
+
+                <thead>
+                    <tr>
+                        <th>Mes</th>
+                        <th>Solicitudes</th>
+                        <th>Atendidas</th>
+                        <th>Pendientes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Enero</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>2</td>
+                    </tr>
+
+                    <tr>
+                        <td>Febrero</td>
+                        <td>18</td>
+                        <td>15</td>
+                        <td>3</td>
+                    </tr>
+
+                    <tr>
+                        <td>Marzo</td>
+                        <td>22</td>
+                        <td>20</td>
+                        <td>2</td>
+                    </tr>
+
+                    <tr>
+                        <td>Abril</td>
+                        <td>27</td>
+                        <td>24</td>
+                        <td>3</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

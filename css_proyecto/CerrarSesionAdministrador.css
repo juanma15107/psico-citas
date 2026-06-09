@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar-custom {
+    background-color: #eadcf0;
+    padding: 12px 0;
+    border-bottom: 1px solid #d8c4e4;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6d5b7c;
+}
+
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #7a3db8;
+}
+
+.btn-logout {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-logout:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+.cerrar-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.cerrar-card {
+    background-color: white;
+    border: 1px solid #e2d5ea;
+    border-radius: 20px;
+    padding: 45px 35px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cerrar-imagen {
+    width: 130px;
+    margin-bottom: 25px;
+}
+
+.cerrar-title {
+    color: #4b007d;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cerrar-text {
+    color: #6d5b7c;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-cancelar {
+    background-color: #d8c4e4;
+    color: #4b007d;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.btn-cancelar:hover {
+    background-color: #c9addb;
+    color: #4b007d;
+}
+
+.btn-salir {
+    background-color: #a85be3;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.btn-salir:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px 15px;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo-title {
+        font-size: 1.1rem;
+    }
+
+    .cerrar-title {
+        font-size: 1.7rem;
+    }
+
+    .cerrar-card {
+        padding: 35px 25px;
+    }
+
+}

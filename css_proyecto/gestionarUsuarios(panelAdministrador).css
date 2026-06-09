@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar-custom {
+    background-color: #eadcf0;
+    border-bottom: 1px solid #d8c4e4;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7a3db8;
+    margin: 0;
+}
+
+.logo-text {
+    margin: 0;
+    color: #6d5b7c;
+}
+
+.nav-link {
+    color: #3d0a5e;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #7a3db8;
+}
+
+.btn-logout {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.btn-logout:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+
+
+.page-title {
+    color: #4b007d;
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+.page-text {
+    color: #6d5b7c;
+}
+
+.search-input {
+    max-width: 350px;
+    border-radius: 20px;
+    border: 1px solid #d5c2e4;
+}
+
+.btn-add {
+    background-color: #a85be3;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.btn-add:hover {
+    background-color: #8f4fd8;
+    color: white;
+}
+
+
+.custom-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.custom-table thead {
+    background-color: #d9c5e6;
+    color: #4b007d;
+}
+
+.custom-table th {
+    font-weight: bold;
+}
+
+.custom-table td,
+.custom-table th {
+    padding: 15px;
+}
+
+.btn-edit {
+    background-color: #c18cf1;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #ab6de8;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #8d4fc7;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #7335ae;
+    color: white;
+}
+
+
+.footer {
+    background-color: #d9c5e6;
+    padding: 25px;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: bold;
+}
