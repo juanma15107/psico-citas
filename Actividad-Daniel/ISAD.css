@@ -1,0 +1,48 @@
+.login{
+    width: 350px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.login h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grupo{
+    margin-bottom: 15px;
+}
+
+.grupo label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.grupo input,
+.grupo select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #e91e63;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #d81b60;
+}
