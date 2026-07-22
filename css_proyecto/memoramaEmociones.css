@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eadcf0;
+    color: #3d0a5e;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #7a3db8;
+}
+
+.descripcion {
+    color: #6d5b7c;
+    margin-bottom: 25px;
+}
+
+.estadisticas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    gap: 15px;
+    justify-content: center;
+}
+
+.carta {
+    width: 120px;
+    height: 120px;
+    background-color: #a85be3;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.carta:hover {
+    transform: scale(1.05);
+}
+
+.abierta {
+    background-color: white;
+}
+
+.encontrada {
+    background-color: #d9c5e6;
+    cursor: default;
+}
+
+.mensaje {
+    margin-top: 25px;
+    min-height: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.btn-reiniciar {
+    margin-top: 20px;
+
+    background-color: #a85be3;
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 12px 24px;
+
+    cursor: pointer;
+}
+
+.btn-reiniciar:hover {
+    background-color: #8f4fd8;
+}
+
+@media (max-width: 600px) {
+
+    .tablero {
+        grid-template-columns: repeat(4, 70px);
+    }
+
+    .carta {
+        width: 70px;
+        height: 70px;
+        font-size: 1.7rem;
+    }
+
+}
