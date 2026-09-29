@@ -5,7 +5,7 @@ body {
     color: #3d0a5e;
 }
 
-
+/* Menú */
 .navbar-custom {
     background-color: #eadcf0;
     padding: 12px 0;
@@ -39,6 +39,7 @@ body {
     color: #7a3db8;
 }
 
+/* Botón */
 .btn-login {
     background-color: #a85be3;
     color: white;
@@ -51,7 +52,7 @@ body {
     color: white;
 }
 
-
+/* Sección de servicios */
 .services-section {
     padding: 70px 20px;
 }
@@ -74,7 +75,7 @@ body {
     line-height: 1.7;
 }
 
-
+/* Tarjetas */
 .service-card {
     background-color: white;
     border: 1px solid #e2d5ea;
@@ -90,7 +91,7 @@ body {
     font-weight: bold;
 }
 
-
+/* Pie de página */
 .footer {
     background-color: #d9c5e6;
     padding: 25px 15px;
@@ -105,14 +106,13 @@ body {
 .footer-link {
     color: #6d2da8;
     text-decoration: none;
-    margin: 0 10px;
 }
 
 .footer-link:hover {
     text-decoration: underline;
 }
 
-
+/* Adaptación a celulares */
 @media (max-width: 768px) {
 
     .services-title {

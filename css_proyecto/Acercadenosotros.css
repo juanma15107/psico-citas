@@ -1,3 +1,6 @@
+
+/* Estilos generales */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,6 +8,8 @@ body {
     color: #3d0a5e;
 }
 
+
+/* Barra de navegación */
 
 .navbar-custom {
     background-color: #eadcf0;
@@ -39,6 +44,13 @@ body {
     color: #7a3db8;
 }
 
+.nav-link.active {
+    color: #7a3db8;
+}
+
+
+/* Botón de inicio de sesión */
+
 .btn-login {
     background-color: #a85be3;
     color: white;
@@ -52,12 +64,14 @@ body {
 }
 
 
+/* Sección principal */
+
 .about-section {
     padding: 70px 20px;
 }
 
 .about-header {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .about-title {
@@ -75,6 +89,8 @@ body {
 }
 
 
+/* Tarjetas informativas */
+
 .about-card {
     background-color: white;
     border: 1px solid #e2d5ea;
@@ -90,6 +106,14 @@ body {
     font-weight: bold;
 }
 
+.about-card p {
+    color: #6d5b7c;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* Pie de página */
 
 .footer {
     background-color: #d9c5e6;
@@ -102,16 +126,12 @@ body {
     margin-bottom: 5px;
 }
 
-.footer-link {
-    color: #6d2da8;
-    text-decoration: none;
-    margin: 0 10px;
+.footer-address {
+    margin-bottom: 0;
 }
 
-.footer-link:hover {
-    text-decoration: underline;
-}
 
+/* Ajustes para celulares */
 
 @media (max-width: 768px) {
 
@@ -129,6 +149,29 @@ body {
 
     .about-text {
         font-size: 0.95rem;
+    }
+
+    .about-section {
+        padding: 45px 15px;
+    }
+
+    .about-header {
+        margin-bottom: 30px;
+    }
+
+    .navbar-nav {
+        padding-top: 10px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .btn-login {
+        display: inline-block;
+        margin-top: 8px;
+        margin-bottom: 10px;
     }
 
 }
