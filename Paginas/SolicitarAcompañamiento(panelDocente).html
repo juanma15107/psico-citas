@@ -15,76 +15,71 @@
 
 <body>
 
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
 
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
 
-        <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="#">
 
-            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                    <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
+                        alt="Logo" class="logo">
 
-                <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
-                    alt="Logo"
-                    class="logo">
+                    <div>
+                        <h1 class="logo-title">Panel del Docente</h1>
+                        <p class="logo-text">Psico-Agenda</p>
+                    </div>
 
-                <div>
-                    <h1 class="logo-title">Panel del Docente</h1>
-                    <p class="logo-text">Psico-Agenda</p>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+                    <ul class="navbar-nav align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./iniciaDocentes.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./serviciosDocente.html">
+                                Servicios
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./SolicitarAcompañamiento(panelDocente).html">
+                                Solicitar Acompañamiento
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./verEstudiantes(panelDocente).html">
+                                Ver Estudiantes
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-logout" href="../Paginas/CerrarSesiónDocentes.html">
+                                Cerrar Sesión
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </div>
-
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="menu">
-
-                <ul class="navbar-nav align-items-lg-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="./iniciaDocentes.html">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="./serviciosDocente.html">
-                            Servicios
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active"
-                            href="./SolicitarAcompañamiento(panelDocente).html">
-                            Solicitar Acompañamiento
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="./verEstudiantes(panelDocente).html">
-                            Ver Estudiantes
-                        </a>
-                    </li>
-
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-logout" href="../Paginas/CerrarSesiónDocentes.html">
-                            Cerrar Sesión
-                        </a>
-                    </li>
-
-                </ul>
 
             </div>
 
-        </div>
-
-    </nav>
-
+        </nav>
+    </header>
 
     <main class="container cita-section">
 
@@ -160,9 +155,7 @@
                                 Nombre del docente
                             </label>
 
-                            <input type="text"
-                                class="form-control"
-                                placeholder="Ingresa tu nombre">
+                            <input type="text" class="form-control" placeholder="Ingresa tu nombre">
 
                         </div>
 
@@ -173,9 +166,7 @@
                                 Curso o grupo
                             </label>
 
-                            <input type="text"
-                                class="form-control"
-                                placeholder="Ejemplo: 10°B">
+                            <input type="text" class="form-control" placeholder="Ejemplo: 10°B">
 
                         </div>
 
@@ -186,8 +177,7 @@
                                 Fecha solicitada
                             </label>
 
-                            <input type="date"
-                                class="form-control">
+                            <input type="date" class="form-control">
 
                         </div>
 
@@ -198,8 +188,7 @@
                                 Hora
                             </label>
 
-                            <input type="time"
-                                class="form-control">
+                            <input type="time" class="form-control">
 
                         </div>
 
@@ -210,15 +199,13 @@
                                 Motivo de la solicitud
                             </label>
 
-                            <textarea class="form-control"
-                                rows="4"
+                            <textarea class="form-control" rows="4"
                                 placeholder="Describe el acompañamiento que necesita el grupo"></textarea>
 
                         </div>
 
 
-                        <button type="submit"
-                            class="btn btn-cita w-100">
+                        <button type="submit" class="btn btn-cita w-100">
 
                             Solicitar Acompañamiento
 
