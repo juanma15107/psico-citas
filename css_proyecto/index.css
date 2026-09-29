@@ -1,3 +1,6 @@
+
+/* Estilos generales */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,6 +8,8 @@ body {
     color: #3d0a5e;
 }
 
+
+/* Barra de navegación */
 
 .navbar-custom {
     background-color: #eadcf0;
@@ -52,6 +57,8 @@ body {
 }
 
 
+/* Sección de bienvenida */
+
 .hero {
     padding: 80px 20px;
 }
@@ -88,6 +95,8 @@ body {
 }
 
 
+/* Pie de página */
+
 .footer {
     background-color: #d9c5e6;
     padding: 25px 15px;
@@ -99,16 +108,8 @@ body {
     margin-bottom: 5px;
 }
 
-.footer-link {
-    color: #6d2da8;
-    text-decoration: none;
-    margin: 0 10px;
-}
 
-.footer-link:hover {
-    text-decoration: underline;
-}
-
+/* Ajustes para celulares */
 
 @media (max-width: 768px) {
 
