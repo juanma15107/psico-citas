@@ -3,12 +3,12 @@ require_once 'conexion.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        $nombre = $_POST['nombre'];
+        $nombre = $_POST['nombre']; // salchipapa = name de los imput
         $edad = $_POST['edad'];
         $correo = $_POST['correo'];
 
         try{
-            $sql = "INSERT INTO tablita (nombre, edad, correo) VALUES (:nombre, :edad, :correo)";
+            $sql = "INSERT INTO la tabla que van a editar (nombre, edad, correo) //estos son los nombres de las columnas de la db VALUES (:nombre, :edad, :correo)";
             $stmt = $pdo->prepare($sql);
 
             $stmt->execute([
