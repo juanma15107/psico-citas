@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -168,7 +169,7 @@
                         Formulario de Cita
                     </h3>
 
-                    <form>
+                    <form method="POST" action="SolicitarCita(panelEstudiante).php">
 
                         <div class="mb-3">
 
@@ -176,7 +177,7 @@
                                 Nombre completo
                             </label>
 
-                            <input type="text" class="form-control" placeholder="Ingresa tu nombre">
+                            <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="salchipapa">
 
                         </div>
 
