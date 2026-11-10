@@ -1,6 +1,6 @@
 <?php //Credenciales y parametros de conexión
     $host = '127.0.0.1';
-    $db = 'dulce';
+    $db = 'psico_citas';
     $user = 'root';
     $pass = '';
     $charset = 'utf8mb4';
@@ -18,4 +18,4 @@
     }catch (PDOException $e){
         die("Error al conectarla DB:" . $e->getMessage());
     }                   
-?>
+?>          
