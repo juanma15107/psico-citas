@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +13,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../Estilos.css">
+    <link rel="stylesheet" href="../ESTILOS/Estilos.css">
 
 </head>
 
@@ -168,7 +169,7 @@
                         Formulario de Cita
                     </h3>
 
-                    <form>
+                    <form method="POST" action="SolicitarCita(panelEstudiante).php">
 
                         <div class="mb-3">
 
@@ -176,7 +177,7 @@
                                 Nombre completo
                             </label>
 
-                            <input type="text" class="form-control" placeholder="Ingresa tu nombre">
+                            <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="salchipapa">
 
                         </div>
 
