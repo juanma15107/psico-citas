@@ -3,7 +3,7 @@
 // Credenciales y parámetros de conexión
 
 $host = '127.0.0.1';
-$db = 'psicocitas (1)';
+$db = 'psico_citas';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
