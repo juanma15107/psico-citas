@@ -1,4 +1,38 @@
+<?php
+require_once 'conexion.php';
 
+if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $nombre = $_POST['nombre'];
+        $documento = $_POST['documento'];
+        $correo = $_POST['correo'];
+        $fecha = $_POST['fecha'];
+        $hora = $_POST['hora'];
+        $motivo = $_POST['motivo'];
+
+        try{
+            $sql = "INSERT INTO citas (nombre, documento, correo, fecha, hora, motivo) VALUES (:nombre, :documento, :correo, :fecha, :hora, :motivo)";
+            $stmt = $pdo->prepare($sql);
+
+            $stmt->execute([
+                'nombre' => $nombre,
+                'documento' => $documento,
+                'correo' => $correo,
+                'fecha' => $fecha,
+                'hora' => $hora,
+                'motivo' => $motivo,
+            ]);
+
+            $mensaje = "Usuario registrado correctamente". $nombre;
+
+
+        }catch (PDOException $e){
+            $mensaje = "error en la DB" . $e->getMessage();
+        }
+
+        
+    }
+?> 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -177,7 +211,17 @@
                                 Nombre completo
                             </label>
 
-                            <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="salchipapa">
+                            <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="nombre">
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Documento
+                            </label>
+
+                            <input type="text" class="form-control" placeholder="Ingresa tu documento" name="documento">
 
                         </div>
 
@@ -187,7 +231,7 @@
                                 Correo institucional
                             </label>
 
-                            <input type="email" class="form-control" placeholder="correo@institucion.edu">
+                            <input type="email" class="form-control" placeholder="correo@institucion.edu" name="correo">
 
                         </div>
 
@@ -197,7 +241,7 @@
                                 Fecha
                             </label>
 
-                            <input type="date" class="form-control">
+                            <input type="date" class="form-control" name="fecha">
 
                         </div>
 
@@ -207,7 +251,7 @@
                                 Hora
                             </label>
 
-                            <input type="time" class="form-control">
+                            <input type="time" class="form-control" name=hora>
 
                         </div>
 
@@ -218,7 +262,7 @@
                             </label>
 
                             <textarea class="form-control" rows="4"
-                                placeholder="Describe brevemente el motivo de la cita"></textarea>
+                                placeholder="Describe brevemente el motivo de la cita" name="motivo"></textarea>
 
                         </div>
 
