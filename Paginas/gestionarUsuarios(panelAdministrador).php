@@ -1,6 +1,6 @@
 <?php
 
-include("../conexion.php");
+include("../P.H.P_EJEMPLOS/conexion.php");
 
 
 // AGREGAR USUARIO
@@ -59,7 +59,7 @@ $usuarios = $stmt->fetchAll();
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../Estilos.css">
+    <link rel="stylesheet" href="../ESTILOS/Estilos.css">
 </head>
 
 <body>
