@@ -1,21 +1,29 @@
-<?php //Credenciales y parametros de conexión
-    $host = '127.0.0.1';
-    $db = 'psico_citas';
-    $user = 'root';
-    $pass = '';
-    $charset = 'utf8mb4';
+<?php
 
-    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+// Credenciales y parámetros de conexión
 
-    $opciones = [
-        PDO:: ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO:: ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO:: ATTR_EMULATE_PREPARES => false,
-    ];
+$host = '127.0.0.1';
+$db = 'psicocitas (1)';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
 
-    try{
-        $pdo = new PDO($dsn, $user, $pass, $opciones);
-    }catch (PDOException $e){
-        die("Error al conectarla DB:" . $e->getMessage());
-    }                   
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+$opciones = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+
+try {
+
+    $pdo = new PDO($dsn, $user, $pass, $opciones);
+
+} catch (PDOException $e) {
+
+    die("Error al conectar la DB: " . $e->getMessage());
+
+}
+
 ?>
