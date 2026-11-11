@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $motivo = $_POST['motivo'];
 
         try{
-            $sql = "INSERT INTO citas (nombre, documento, correo, fecha, hora, motivo) VALUES (:nombre, :documento, :correo, :fecha, :hora, :motivo)";
+            $sql = "INSERT INTO citas (nombre_completo, documento, correo_institucional, fecha, hora, motivo) VALUES (:nombre, :documento, :correo, :fecha, :hora, :motivo)";
             $stmt = $pdo->prepare($sql);
 
             $stmt->execute([
@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 'motivo' => $motivo,
             ]);
 
-            $mensaje = "Usuario registrado correctamente". $nombre;
+            $mensaje = "Cita registrada correctamente". $nombre;
 
 
         }catch (PDOException $e){
