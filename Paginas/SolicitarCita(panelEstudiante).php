@@ -1,5 +1,5 @@
 <?php
-require_once 'conexion.php';
+require_once '../P.H.P_EJEMPLOS/conexion.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
     {
