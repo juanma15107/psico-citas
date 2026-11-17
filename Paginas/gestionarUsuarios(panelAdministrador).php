@@ -99,12 +99,9 @@ $usuarios = $stmt->fetchAll();
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./reportes(panelAdministrador).html">Reportes</a>
+                            <a class="nav-link" href="./reportes(panelAdministrador).php">Reportes</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./configuracion(panelAdministrador).html">Configuración</a>
-                        </li>
 
                         <li class="nav-item ms-lg-3">
                             <a class="btn btn-logout" href="./CerrarSesionAdministrador.html">
