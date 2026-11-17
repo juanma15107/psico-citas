@@ -1,38 +1,51 @@
+
 <?php
 require_once '../P.H.P_EJEMPLOS/conexion.php';
 
-if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $nombre = $_POST['nombre'];
-        $documento = $_POST['documento'];
-        $correo = $_POST['correo'];
-        $fecha = $_POST['fecha'];
-        $hora = $_POST['hora'];
-        $motivo = $_POST['motivo'];
+$mensaje = "";
 
-        try{
-            $sql = "INSERT INTO citas (nombre_completo, documento, correo_institucional, fecha, hora, motivo) VALUES (:nombre, :documento, :correo, :fecha, :hora, :motivo)";
-            $stmt = $pdo->prepare($sql);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            $stmt->execute([
-                'nombre' => $nombre,
-                'documento' => $documento,
-                'correo' => $correo,
-                'fecha' => $fecha,
-                'hora' => $hora,
-                'motivo' => $motivo,
-            ]);
+    $nombre = $_POST['nombre'];
+    $documento = $_POST['documento'];
+    $correo = $_POST['correo'];
+    $grado = $_POST['grado'];
+    $curso = $_POST['curso'];
+    $fecha = $_POST['fecha'];
+    $hora = $_POST['hora'];
+    $motivo = $_POST['motivo'];
 
-            $mensaje = "Cita registrada correctamente". $nombre;
+    try {
 
+        $sql = "INSERT INTO citas 
+        (nombre_completo, documento, correo_institucional, rol_solicitante, grado, curso_grupo, fecha, hora, motivo) 
+        VALUES 
+        (:nombre, :documento, :correo, :rol, :grado, :curso, :fecha, :hora, :motivo)";
 
-        }catch (PDOException $e){
-            $mensaje = "error en la DB" . $e->getMessage();
-        }
+        $stmt = $pdo->prepare($sql);
 
-        
+        $stmt->execute([
+            'nombre' => $nombre,
+            'documento' => $documento,
+            'correo' => $correo,
+            'rol' => 'Estudiante',
+            'grado' => $grado,
+            'curso' => $curso,
+            'fecha' => $fecha,
+            'hora' => $hora,
+            'motivo' => $motivo
+        ]);
+
+        $mensaje = "Cita registrada correctamente, " . $nombre;
+
+    } catch (PDOException $e) {
+
+        $mensaje = "No se pudo registrar la cita. Inténtalo nuevamente.";
+
     }
-?> 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -41,9 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Solicitar Cita - Psico-Agenda
-    </title>
+    <title>Solicitar Cita - Psico-Agenda</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -88,53 +99,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                     <ul class="navbar-nav align-items-lg-center">
 
                         <li class="nav-item">
-
                             <a class="nav-link" href="./iniciaEstudiantes.html">
-
                                 Inicio
-
                             </a>
-
                         </li>
 
                         <li class="nav-item">
-
                             <a class="nav-link" href="./servicioEstudiantes.html">
-
                                 Servicios
-
                             </a>
-
                         </li>
 
                         <li class="nav-item">
-
                             <a class="nav-link" href="./verEstado(panelEstudiante).html">
-
                                 Ver Estado
-
                             </a>
-
                         </li>
 
                         <li class="nav-item">
-
-                            <a class="nav-link active" href="./SolicitarCita(panelEstudiante).html">
-
+                            <a class="nav-link active" href="./SolicitarCita(panelEstudiante).php">
                                 Solicitar Cita
-
                             </a>
-
                         </li>
 
                         <li class="nav-item ms-lg-3">
-
                             <a class="btn btn-logout" href="./CerrarSesiónEstudiantes.html">
-
                                 Cerrar Sesión
-
                             </a>
-
                         </li>
 
                     </ul>
@@ -145,7 +136,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         </nav>
     </header>
-    
 
     <main class="container cita-section">
 
@@ -173,21 +163,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
                     <ul>
 
-                        <li>
-                            Solicitar una nueva cita psicológica.
-                        </li>
-
-                        <li>
-                            Elegir fecha y hora disponible.
-                        </li>
-
-                        <li>
-                            Explicar brevemente tu situación.
-                        </li>
-
-                        <li>
-                            Recibir acompañamiento profesional.
-                        </li>
+                        <li>Solicitar una nueva cita psicológica.</li>
+                        <li>Elegir fecha y hora disponible.</li>
+                        <li>Explicar brevemente tu situación.</li>
+                        <li>Recibir acompañamiento profesional.</li>
 
                     </ul>
 
@@ -203,6 +182,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                         Formulario de Cita
                     </h3>
 
+                    <?php if ($mensaje != "") { ?>
+                        <div class="alert alert-info">
+                            <?php echo htmlspecialchars($mensaje); ?>
+                        </div>
+                    <?php } ?>
+
                     <form method="POST" action="SolicitarCita(panelEstudiante).php">
 
                         <div class="mb-3">
@@ -211,7 +196,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                 Nombre completo
                             </label>
 
-                            <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="nombre">
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa tu nombre" name="nombre" required>
 
                         </div>
 
@@ -221,7 +207,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                 Documento
                             </label>
 
-                            <input type="text" class="form-control" placeholder="Ingresa tu documento" name="documento">
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa tu documento" name="documento" required>
 
                         </div>
 
@@ -231,7 +218,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                 Correo institucional
                             </label>
 
-                            <input type="email" class="form-control" placeholder="correo@institucion.edu" name="correo">
+                            <input type="email" class="form-control"
+                                placeholder="correo@institucion.edu" name="correo" required>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Grado
+                            </label>
+
+                            <input type="text" class="form-control"
+                                placeholder="Ejemplo: 10°" name="grado" required>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Curso
+                            </label>
+
+                            <input type="text" class="form-control"
+                                placeholder="Ejemplo: 1" name="curso" required>
 
                         </div>
 
@@ -241,7 +251,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                 Fecha
                             </label>
 
-                            <input type="date" class="form-control" name="fecha">
+                            <input type="date" class="form-control" name="fecha" required>
 
                         </div>
 
@@ -251,7 +261,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                 Hora
                             </label>
 
-                            <input type="time" class="form-control" name=hora>
+                            <input type="time" class="form-control" name="hora" required>
 
                         </div>
 
@@ -262,14 +272,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                             </label>
 
                             <textarea class="form-control" rows="4"
-                                placeholder="Describe brevemente el motivo de la cita" name="motivo"></textarea>
+                                placeholder="Describe brevemente el motivo de la cita"
+                                name="motivo" required></textarea>
 
                         </div>
 
                         <button type="submit" class="btn btn-cita w-100">
-
                             Solicitar Cita
-
                         </button>
 
                     </form>
@@ -297,7 +306,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
-
 
 </html>

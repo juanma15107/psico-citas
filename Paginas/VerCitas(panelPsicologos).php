@@ -25,11 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'id_cita' => $id_cita
             ]);
 
-            $mensaje = "Estado de la cita actualizado correctamente.";
+            $mensaje = "Estado de la solicitud actualizado correctamente.";
 
         } catch (PDOException $e) {
 
-            $mensaje = "No fue posible actualizar el estado de la cita.";
+            $mensaje = "No fue posible actualizar el estado de la solicitud.";
 
         }
 
@@ -111,43 +111,27 @@ try {
                     <ul class="navbar-nav align-items-lg-center">
 
                         <li class="nav-item">
-
                             <a class="nav-link" href="./iniciaPsicologo.html">
                                 Inicio
                             </a>
-
                         </li>
 
                         <li class="nav-item">
-
                             <a class="nav-link" href="./serviciosPsicologos.html">
                                 Servicios
                             </a>
-
                         </li>
 
                         <li class="nav-item">
-
-                            <a class="nav-link" href="./Historial(panelPsicologos).html">
-                                Historial
-                            </a>
-
-                        </li>
-
-                        <li class="nav-item">
-
                             <a class="nav-link active" href="./VerCitas(panelPsicologos).php">
                                 Ver Citas
                             </a>
-
                         </li>
 
                         <li class="nav-item ms-lg-3">
-
                             <a class="btn btn-logout" href="./CerrarSesiónPsicologo.html">
                                 Cerrar Sesión
                             </a>
-
                         </li>
 
                     </ul>
@@ -165,14 +149,14 @@ try {
         <section class="text-center citas-header">
 
             <h2 class="citas-title">
-                Estudiantes con Citas Solicitadas
+                Solicitudes de Acompañamiento
             </h2>
 
             <p class="citas-text">
 
-                Consulta las solicitudes de citas psicológicas,
-                revisa horarios programados y realiza seguimiento
-                al estado de cada acompañamiento estudiantil.
+                Consulta las solicitudes realizadas por estudiantes y docentes,
+                revisa los horarios programados y realiza seguimiento
+                al estado de cada acompañamiento psicológico.
 
             </p>
 
@@ -195,7 +179,10 @@ try {
                     <tr>
 
                         <th>ID</th>
-                        <th>Nombre del Estudiante</th>
+                        <th>Nombre</th>
+                        <th>Tipo de solicitante</th>
+                        <th>Grado</th>
+                        <th>Curso o grupo</th>
                         <th>Documento</th>
                         <th>Correo</th>
                         <th>Fecha</th>
@@ -222,6 +209,18 @@ try {
 
                                 <td>
                                     <?php echo htmlspecialchars($cita['nombre_completo']); ?>
+                                </td>
+
+                                <td>
+                                    <?php echo htmlspecialchars($cita['rol_solicitante'] ?? 'Estudiante'); ?>
+                                </td>
+
+                                <td>
+                                    <?php echo !empty($cita['grado']) ? htmlspecialchars($cita['grado']) : '—'; ?>
+                                </td>
+
+                                <td>
+                                    <?php echo !empty($cita['curso_grupo']) ? htmlspecialchars($cita['curso_grupo']) : '—'; ?>
                                 </td>
 
                                 <td>
@@ -297,8 +296,8 @@ try {
 
                         <tr>
 
-                            <td colspan="9" class="text-center">
-                                Todavía no hay citas registradas.
+                            <td colspan="12" class="text-center">
+                                Todavía no hay solicitudes registradas.
                             </td>
 
                         </tr>

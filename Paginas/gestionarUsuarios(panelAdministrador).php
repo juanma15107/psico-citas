@@ -94,7 +94,7 @@ $usuarios = $stmt->fetchAll();
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="./gestionarUsuarios(panelAdministrador).html">Gestionar
+                            <a class="nav-link active" href="./gestionarUsuarios(panelAdministrador).php">Gestionar
                                 Usuarios</a>
                         </li>
 

@@ -17,6 +17,12 @@ try {
     $sqlAtendidas = "SELECT COUNT(*) FROM citas WHERE estado = 'Atendida'";
     $atendidas = $pdo->query($sqlAtendidas)->fetchColumn();
 
+    $sqlEstudiantes = "SELECT COUNT(*) FROM citas WHERE rol_solicitante = 'Estudiante'";
+    $estudiantes = $pdo->query($sqlEstudiantes)->fetchColumn();
+
+    $sqlDocentes = "SELECT COUNT(*) FROM citas WHERE rol_solicitante = 'Docente'";
+    $docentes = $pdo->query($sqlDocentes)->fetchColumn();
+
     $sql = "SELECT * FROM citas ORDER BY fecha DESC, hora DESC";
     $stmt = $pdo->query($sql);
 
@@ -79,7 +85,7 @@ try {
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./gestionarUsuarios(panelAdministrador).html">
+                            <a class="nav-link" href="./gestionarUsuarios(panelAdministrador).php">
                                 Gestionar Usuarios
                             </a>
                         </li>
@@ -90,11 +96,6 @@ try {
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./configuracion(panelAdministrador).html">
-                                Configuración
-                            </a>
-                        </li>
 
                         <li class="nav-item ms-lg-3">
                             <a class="btn btn-logout" href="./CerrarSesionAdministrador.html">
@@ -132,7 +133,7 @@ try {
 
                 <div class="report-card">
                     <h3><?php echo $total; ?></h3>
-                    <p>Total de citas</p>
+                    <p>Total de solicitudes</p>
                 </div>
 
             </div>
@@ -164,6 +165,24 @@ try {
 
             </div>
 
+            <div class="col-md-6">
+
+                <div class="report-card">
+                    <h3><?php echo $estudiantes; ?></h3>
+                    <p>Solicitudes de estudiantes</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="report-card">
+                    <h3><?php echo $docentes; ?></h3>
+                    <p>Solicitudes de docentes</p>
+                </div>
+
+            </div>
+
         </section>
 
         <section class="mb-4">
@@ -180,7 +199,10 @@ try {
 
                         <tr>
                             <th>ID</th>
-                            <th>Estudiante</th>
+                            <th>Nombre</th>
+                            <th>Tipo de solicitante</th>
+                            <th>Grado</th>
+                            <th>Curso o grupo</th>
                             <th>Documento</th>
                             <th>Correo</th>
                             <th>Fecha</th>
@@ -199,10 +221,24 @@ try {
 
                                 <tr>
 
-                                    <td><?php echo $cita['id_cita']; ?></td>
+                                    <td>
+                                        <?php echo $cita['id_cita']; ?>
+                                    </td>
 
                                     <td>
                                         <?php echo htmlspecialchars($cita['nombre_completo']); ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo htmlspecialchars($cita['rol_solicitante'] ?? 'Estudiante'); ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo !empty($cita['grado']) ? htmlspecialchars($cita['grado']) : '—'; ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo !empty($cita['curso_grupo']) ? htmlspecialchars($cita['curso_grupo']) : '—'; ?>
                                     </td>
 
                                     <td>
@@ -236,8 +272,8 @@ try {
                         <?php } else { ?>
 
                             <tr>
-                                <td colspan="8" class="text-center">
-                                    Todavía no hay citas registradas.
+                                <td colspan="11" class="text-center">
+                                    Todavía no hay solicitudes registradas.
                                 </td>
                             </tr>
 
