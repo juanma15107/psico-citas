@@ -11,6 +11,9 @@
 
     <!-- CSS de la página -->
     <link rel="stylesheet" href="../psico-citas/ESTILOS/Estilos.css">
+
+    <!-- Estilos del chatbot -->
+    <link rel="stylesheet" href="./CHATBOT_PSICO_AGENDA/chatbot.css">
 </head>
 
 <body>
@@ -64,7 +67,7 @@
                                 Sobre Nosotros
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="./Paginas/Creadores.html">
                                 Creadores
@@ -77,10 +80,16 @@
                             </a>
                         </li>
 
-                        <li class="nav-item ms-lg-3">
-                            <a class="btn btn-login" href="./Paginas/iniciar_sesion.html">
+                        <li class="nav-item ms-lg-3 d-flex gap-2 flex-wrap">
+
+                            <a class="btn btn-login" href="./Paginas/iniciar_sesion.php">
                                 Iniciar Sesión
                             </a>
+
+                            <a class="btn btn-login" href="./Paginas/registrarse.php">
+                                Registrarse
+                            </a>
+
                         </li>
 
                     </ul>
@@ -107,7 +116,7 @@
                 rápida, segura y accesible para estudiantes, docentes y profesionales.
             </p>
 
-            <a href="./Paginas/iniciar_sesion.html" class="btn hero-button">
+            <a href="./Paginas/iniciar_sesion.php" class="btn hero-button">
                 Iniciar Sesión
             </a>
 
@@ -119,7 +128,7 @@
     <!-- Pie de página -->
     <footer class="footer text-center">
 
-        <p class="footer-title">
+        <p class="footer-title">        
             &copy; Psico-Agenda
         </p>
 
@@ -134,7 +143,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Link para copiar y pegar de php -->
 
-    <script src="conexion.php"></script>
+    <!-- Chatbot de la página principal -->
+    <script src="./CHATBOT_PSICO_AGENDA/chatbot.js" data-contexto="inicio"></script>
+
 </body>
 
 </html>
