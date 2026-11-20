@@ -1,45 +1,89 @@
 <?php
-// Activar errores temporalmente para diagnóstico si algo llega a fallar
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include("../conexion.php");
+require_once '../P.H.P_EJEMPLOS/conexion.php';
 
 $mensaje = "";
 $tipoAlerta = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nombre_docente = trim($_POST['nombre_docente'] ?? '');
-    $curso = trim($_POST['curso'] ?? '');
-    $fecha = $_POST['fecha'] ?? '';
-    $hora = $_POST['hora'] ?? '';
-    $motivo = trim($_POST['motivo'] ?? '');
+    $documento      = trim($_POST['documento'] ?? '');
+    $correo         = trim($_POST['correo_institucional'] ?? '');
+    $curso          = trim($_POST['curso_grupo'] ?? '');
+    $fecha          = trim($_POST['fecha'] ?? '');
+    $hora           = trim($_POST['hora'] ?? '');
+    $motivo         = trim($_POST['motivo'] ?? '');
 
-    // Combinar fecha y hora para el campo de tipo DATETIME (si tu tabla usa fecha_hora)
-    $fecha_hora = (!empty($fecha) && !empty($hora)) ? $fecha . ' ' . $hora . ':00' : '';
+    if (strlen($hora) === 5) {
+        $hora .= ':00';
+    }
 
-    if (!empty($nombre_docente) && !empty($curso) && !empty($fecha) && !empty($hora) && !empty($motivo)) {
+    if ($nombre_docente !== '' && $documento !== '' && $curso !== '' && $fecha !== '' && $hora !== '' && $motivo !== '') {
         try {
-            // Unificamos la información del docente en el campo motivo o la estructura que maneje tu tabla 'citas'
-            $motivo_completo = "Docente: $nombre_docente | Curso: $curso | Motivo: $motivo";
-
-            // Usamos la misma tabla 'citas' o la que corresponda en tu base de datos de usuarios
-            $sql = "INSERT INTO citas (id_ticket, id_area, motivo, estado, sede, fecha_hora) 
-                    VALUES (:id_ticket, :id_area, :motivo, :estado, :sede, :fecha_hora)";
-            
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute([
-                ':id_ticket' => 1,
-                ':id_area' => 2, // Área asignada para docentes
-                ':motivo' => $motivo_completo,
-                ':estado' => 'Pendiente',
-                ':sede' => 'Medellín',
-                ':fecha_hora' => $fecha_hora
+            $sqlCheck = "SELECT COUNT(*)
+                         FROM citas
+                         WHERE fecha = :fecha
+                           AND hora = :hora
+                           AND estado IN ('Aprobada', 'Confirmada')";
+            $stmtCheck = $pdo->prepare($sqlCheck);
+            $stmtCheck->execute([
+                ':fecha' => $fecha,
+                ':hora'  => $hora
             ]);
 
-            $mensaje = "¡Acompañamiento solicitado con éxito!";
-            $tipoAlerta = "success";
+            if ((int)$stmtCheck->fetchColumn() > 0) {
+                $mensaje = "Ese día y hora ya fueron aceptados por el psicólogo y están bloqueados.";
+                $tipoAlerta = "warning";
+            } else {
+                if ($correo === '') {
+                    $stmtUser = $pdo->prepare("SELECT correo FROM usuarios WHERE documento = :documento LIMIT 1");
+                    $stmtUser->execute([':documento' => $documento]);
+                    $usuario = $stmtUser->fetch();
+                    $correo = $usuario['correo'] ?? 'sin-correo@institucion.edu.co';
+                }
+
+                $sql = "INSERT INTO citas (
+                            nombre_completo,
+                            documento,
+                            correo_institucional,
+                            fecha,
+                            hora,
+                            motivo,
+                            estado,
+                            rol_solicitante,
+                            curso_grupo,
+                            grado
+                        ) VALUES (
+                            :nombre_completo,
+                            :documento,
+                            :correo_institucional,
+                            :fecha,
+                            :hora,
+                            :motivo,
+                            'Pendiente',
+                            'Docente',
+                            :curso_grupo,
+                            :grado
+                        )";
+
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    ':nombre_completo'      => $nombre_docente,
+                    ':documento'            => $documento,
+                    ':correo_institucional' => $correo,
+                    ':fecha'                => $fecha,
+                    ':hora'                 => $hora,
+                    ':motivo'               => $motivo,
+                    ':curso_grupo'          => $curso,
+                    ':grado'                => mb_substr($curso, 0, 20)
+                ]);
+
+                $mensaje = "¡Solicitud enviada! Quedará en estado Pendiente hasta que el psicólogo la acepte.";
+                $tipoAlerta = "success";
+            }
         } catch (PDOException $e) {
             $mensaje = "Error al registrar en la base de datos: " . $e->getMessage();
             $tipoAlerta = "danger";
@@ -50,7 +94,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -59,8 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitar Acompañamiento - Psico-Agenda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../Estilos.css">
+    <link rel="stylesheet" href="../ESTILOS/Estilos.css">
 </head>
 
 <body>
@@ -94,14 +136,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <a class="nav-link" href="./verEstudiantes(panelDocente).html">Ver Estudiantes</a>
                         </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-logout" href="../Paginas/CerrarSesiónDocentes.html">Cerrar Sesión</a>
+                            <a class="btn btn-logout" href="./CerrarSesiónDocentes.html">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <main class="container cita-section">
         <section class="row align-items-center g-5">
             <div class="col-lg-6">
@@ -134,7 +176,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         Solicitud de Acompañamiento
                     </h3>
 
-                    <!-- Alertas de estado (Éxito o Error) -->
                     <?php if (!empty($mensaje)): ?>
                         <div class="alert alert-<?= $tipoAlerta; ?> alert-dismissible fade show" role="alert">
                             <strong><?= htmlspecialchars($mensaje); ?></strong>
@@ -149,18 +190,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
 
                         <div class="mb-3">
+                            <label class="form-label">Número de documento</label>
+                            <input type="text" class="form-control" placeholder="Ingresa tu número de documento" name="documento" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo institucional</label>
+                            <input type="email" class="form-control" placeholder="correo@institucion.edu.co" name="correo_institucional">
+                        </div>
+
+                        <div class="mb-3">
                             <label class="form-label">Curso o grupo</label>
-                            <input type="text" class="form-control" placeholder="Ejemplo: 10°B" name="curso" required>
+                            <input type="text" class="form-control" placeholder="Ejemplo: 10°B" name="curso_grupo" required>
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Fecha solicitada</label>
-                            <input type="date" class="form-control" name="fecha" required>
+                            <label class="form-label">Día de la cita</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" min="<?= date('Y-m-d'); ?>" required>
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Hora</label>
-                            <input type="time" class="form-control" name="hora" required>
+                            <label class="form-label">Hora de la cita</label>
+                            <select class="form-select" id="hora" name="hora" disabled required>
+                                <option value="">Primero selecciona el día</option>
+                            </select>
                         </div>
 
                         <div class="mb-4">
@@ -187,6 +240,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const inputFecha = document.getElementById('fecha');
+        const selectHora = document.getElementById('hora');
+        const horasJornada = ['08:00', '09:00', '10:00', '11:00', '14:00', '15:00'];
+
+        inputFecha.addEventListener('change', async () => {
+            const fecha = inputFecha.value;
+            selectHora.innerHTML = '<option value="">Cargando horas...</option>';
+            selectHora.disabled = true;
+
+            if (!fecha) {
+                selectHora.innerHTML = '<option value="">Primero selecciona el día</option>';
+                return;
+            }
+
+            try {
+                const res = await fetch(`../P.H.P_EJEMPLOS/api_citas.php?fecha=${encodeURIComponent(fecha)}`);
+                const data = await res.json();
+                const bloqueadas = new Set(data.bloqueadas || []);
+
+                selectHora.innerHTML = '<option value="">Selecciona una hora</option>';
+                let algunaLibre = false;
+
+                horasJornada.forEach((hora) => {
+                    const opt = document.createElement('option');
+                    opt.value = hora;
+                    if (bloqueadas.has(hora)) {
+                        opt.textContent = `${hora} (Bloqueada - ya aceptada)`;
+                        opt.disabled = true;
+                    } else {
+                        opt.textContent = hora;
+                        algunaLibre = true;
+                    }
+                    selectHora.appendChild(opt);
+                });
+
+                selectHora.disabled = !algunaLibre;
+                if (!algunaLibre) {
+                    selectHora.innerHTML = '<option value="">No hay horas libres este día</option>';
+                }
+            } catch (e) {
+                selectHora.innerHTML = '<option value="">Error al cargar horas</option>';
+            }
+        });
+    </script>
 </body>
 
 </html>

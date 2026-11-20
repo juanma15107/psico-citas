@@ -1,303 +1,279 @@
 <?php
 require_once '../P.H.P_EJEMPLOS/conexion.php';
 
-if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $nombre = $_POST['nombre'];
-        $documento = $_POST['documento'];
-        $correo = $_POST['correo'];
-        $fecha = $_POST['fecha'];
-        $hora = $_POST['hora'];
-        $motivo = $_POST['motivo'];
+$mensaje = "";
+$tipoAlerta = "";
 
-        try{
-            $sql = "INSERT INTO citas (nombre_completo, documento, correo_institucional, fecha, hora, motivo) VALUES (:nombre, :documento, :correo, :fecha, :hora, :motivo)";
-            $stmt = $pdo->prepare($sql);
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nombre    = trim($_POST['nombre'] ?? '');
+    $documento = trim($_POST['documento'] ?? '');
+    $correo    = trim($_POST['correo'] ?? '');
+    $fecha     = trim($_POST['fecha'] ?? '');
+    $hora      = trim($_POST['hora'] ?? '');
+    $motivo    = trim($_POST['motivo'] ?? '');
 
-            $stmt->execute([
-                'nombre' => $nombre,
-                'documento' => $documento,
-                'correo' => $correo,
-                'fecha' => $fecha,
-                'hora' => $hora,
-                'motivo' => $motivo,
+    if (strlen($hora) === 5) {
+        $hora .= ':00';
+    }
+
+    if ($nombre !== '' && $documento !== '' && $correo !== '' && $fecha !== '' && $hora !== '' && $motivo !== '') {
+        try {
+            $sqlCheck = "SELECT COUNT(*)
+                         FROM citas
+                         WHERE fecha = :fecha
+                           AND hora = :hora
+                           AND estado IN ('Aprobada', 'Confirmada')";
+            $stmtCheck = $pdo->prepare($sqlCheck);
+            $stmtCheck->execute([
+                ':fecha' => $fecha,
+                ':hora'  => $hora
             ]);
 
-            $mensaje = "Cita registrada correctamente". $nombre;
+            if ((int)$stmtCheck->fetchColumn() > 0) {
+                $mensaje = "Ese día y hora ya fueron aceptados por el psicólogo y están bloqueados.";
+                $tipoAlerta = "warning";
+            } else {
+                $stmtUser = $pdo->prepare("SELECT grado FROM usuarios WHERE documento = :documento LIMIT 1");
+                $stmtUser->execute([':documento' => $documento]);
+                $usuario = $stmtUser->fetch();
+                $grado = $usuario['grado'] ?? null;
 
+                $sql = "INSERT INTO citas (
+                            nombre_completo,
+                            documento,
+                            correo_institucional,
+                            fecha,
+                            hora,
+                            motivo,
+                            estado,
+                            rol_solicitante,
+                            grado
+                        ) VALUES (
+                            :nombre_completo,
+                            :documento,
+                            :correo_institucional,
+                            :fecha,
+                            :hora,
+                            :motivo,
+                            'Pendiente',
+                            'Estudiante',
+                            :grado
+                        )";
 
-        }catch (PDOException $e){
-            $mensaje = "error en la DB" . $e->getMessage();
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    ':nombre_completo'      => $nombre,
+                    ':documento'            => $documento,
+                    ':correo_institucional' => $correo,
+                    ':fecha'                => $fecha,
+                    ':hora'                 => $hora,
+                    ':motivo'               => $motivo,
+                    ':grado'                => $grado
+                ]);
+
+                $mensaje = "Cita solicitada correctamente. Queda pendiente hasta que el psicólogo la acepte.";
+                $tipoAlerta = "success";
+            }
+        } catch (PDOException $e) {
+            $mensaje = "Error en la DB: " . $e->getMessage();
+            $tipoAlerta = "danger";
         }
-
-        
+    } else {
+        $mensaje = "Por favor completa todos los campos del formulario.";
+        $tipoAlerta = "warning";
     }
-?> 
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Solicitar Cita - Psico-Agenda
-    </title>
-
+    <title>Solicitar Cita - Psico-Agenda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="../ESTILOS/Estilos.css">
-
 </head>
 
 <body>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-
             <div class="container">
-
                 <a class="navbar-brand d-flex align-items-center gap-3" href="#">
-
                     <img src="../imagenes/Black_and_Beige_Elegant_Simple_Flower_Circle_Logo-removebg-preview (3).png"
                         alt="Logo" class="logo">
-
                     <div>
-
                         <h1 class="logo-title">
                             Panel del Estudiante
                         </h1>
-
                         <p class="logo-text">
                             Psico-Agenda
                         </p>
-
                     </div>
-
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="menu">
-
                     <ul class="navbar-nav align-items-lg-center">
-
                         <li class="nav-item">
-
-                            <a class="nav-link" href="./iniciaEstudiantes.html">
-
-                                Inicio
-
-                            </a>
-
+                            <a class="nav-link" href="./iniciaEstudiantes.html">Inicio</a>
                         </li>
-
                         <li class="nav-item">
-
-                            <a class="nav-link" href="./servicioEstudiantes.html">
-
-                                Servicios
-
-                            </a>
-
+                            <a class="nav-link" href="./servicioEstudiantes.html">Servicios</a>
                         </li>
-
                         <li class="nav-item">
-
-                            <a class="nav-link" href="./verEstado(panelEstudiante).html">
-
-                                Ver Estado
-
-                            </a>
-
+                            <a class="nav-link" href="./verEstado(panelEstudiante).html">Ver Estado</a>
                         </li>
-
                         <li class="nav-item">
-
-                            <a class="nav-link active" href="./SolicitarCita(panelEstudiante).html">
-
-                                Solicitar Cita
-
-                            </a>
-
+                            <a class="nav-link active" href="./SolicitarCita(panelEstudiante).php">Solicitar Cita</a>
                         </li>
-
                         <li class="nav-item ms-lg-3">
-
-                            <a class="btn btn-logout" href="./CerrarSesiónEstudiantes.html">
-
-                                Cerrar Sesión
-
-                            </a>
-
+                            <a class="btn btn-logout" href="./CerrarSesiónEstudiantes.html">Cerrar Sesión</a>
                         </li>
-
                     </ul>
-
                 </div>
-
             </div>
-
         </nav>
     </header>
-    
 
     <main class="container cita-section">
-
         <section class="row align-items-center g-5">
-
             <div class="col-lg-6">
-
                 <h2 class="titulo-cita">
                     Solicita tu cita psicológica
                 </h2>
-
                 <p class="texto-cita">
-
                     En Psico-Agenda nos preocupamos por tu bienestar emocional.
                     Agenda fácilmente un espacio de acompañamiento psicológico
                     y recibe apoyo profesional en un ambiente seguro y confiable.
-
                 </p>
 
                 <div class="info-box">
-
-                    <h5>
-                        ¿Qué puedes hacer aquí?
-                    </h5>
-
+                    <h5>¿Qué puedes hacer aquí?</h5>
                     <ul>
-
-                        <li>
-                            Solicitar una nueva cita psicológica.
-                        </li>
-
-                        <li>
-                            Elegir fecha y hora disponible.
-                        </li>
-
-                        <li>
-                            Explicar brevemente tu situación.
-                        </li>
-
-                        <li>
-                            Recibir acompañamiento profesional.
-                        </li>
-
+                        <li>Solicitar una nueva cita psicológica.</li>
+                        <li>Elegir fecha y hora disponible.</li>
+                        <li>Explicar brevemente tu situación.</li>
+                        <li>Recibir acompañamiento profesional.</li>
                     </ul>
-
                 </div>
-
             </div>
 
             <div class="col-lg-6">
-
                 <div class="formulario-cita">
-
                     <h3 class="text-center mb-4">
                         Formulario de Cita
                     </h3>
 
+                    <?php if (!empty($mensaje)): ?>
+                        <div class="alert alert-<?= $tipoAlerta; ?> alert-dismissible fade show" role="alert">
+                            <?= htmlspecialchars($mensaje); ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php endif; ?>
+
                     <form method="POST" action="SolicitarCita(panelEstudiante).php">
-
                         <div class="mb-3">
-
-                            <label class="form-label">
-                                Nombre completo
-                            </label>
-
-                            <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="nombre">
-
+                            <label class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="nombre" required>
                         </div>
 
                         <div class="mb-3">
-
-                            <label class="form-label">
-                                Documento
-                            </label>
-
-                            <input type="text" class="form-control" placeholder="Ingresa tu documento" name="documento">
-
+                            <label class="form-label">Documento</label>
+                            <input type="text" class="form-control" placeholder="Ingresa tu documento" name="documento" required>
                         </div>
 
                         <div class="mb-3">
-
-                            <label class="form-label">
-                                Correo institucional
-                            </label>
-
-                            <input type="email" class="form-control" placeholder="correo@institucion.edu" name="correo">
-
+                            <label class="form-label">Correo institucional</label>
+                            <input type="email" class="form-control" placeholder="correo@institucion.edu" name="correo" required>
                         </div>
 
                         <div class="mb-3">
-
-                            <label class="form-label">
-                                Fecha
-                            </label>
-
-                            <input type="date" class="form-control" name="fecha">
-
+                            <label class="form-label">Día de la cita</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" min="<?= date('Y-m-d'); ?>" required>
                         </div>
 
                         <div class="mb-3">
-
-                            <label class="form-label">
-                                Hora
-                            </label>
-
-                            <input type="time" class="form-control" name=hora>
-
+                            <label class="form-label">Hora de la cita</label>
+                            <select class="form-select" id="hora" name="hora" disabled required>
+                                <option value="">Primero selecciona el día</option>
+                            </select>
                         </div>
 
                         <div class="mb-4">
-
-                            <label class="form-label">
-                                Motivo de la cita
-                            </label>
-
+                            <label class="form-label">Motivo de la cita</label>
                             <textarea class="form-control" rows="4"
-                                placeholder="Describe brevemente el motivo de la cita" name="motivo"></textarea>
-
+                                placeholder="Describe brevemente el motivo de la cita" name="motivo" required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-cita w-100">
-
                             Solicitar Cita
-
                         </button>
-
                     </form>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
 
     <footer class="footer text-center">
-
         <p class="footer-title">
             &copy; Psico-Agenda
         </p>
-
         <p>
             Cra. 50B #97a-30, Santa Cruz, Medellín
         </p>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const inputFecha = document.getElementById('fecha');
+        const selectHora = document.getElementById('hora');
+        const horasJornada = ['08:00', '09:00', '10:00', '11:00', '14:00', '15:00'];
 
+        inputFecha.addEventListener('change', async () => {
+            const fecha = inputFecha.value;
+            selectHora.innerHTML = '<option value="">Cargando horas...</option>';
+            selectHora.disabled = true;
+
+            if (!fecha) {
+                selectHora.innerHTML = '<option value="">Primero selecciona el día</option>';
+                return;
+            }
+
+            try {
+                const res = await fetch(`../P.H.P_EJEMPLOS/api_citas.php?fecha=${encodeURIComponent(fecha)}`);
+                const data = await res.json();
+                const bloqueadas = new Set(data.bloqueadas || []);
+
+                selectHora.innerHTML = '<option value="">Selecciona una hora</option>';
+                let algunaLibre = false;
+
+                horasJornada.forEach((hora) => {
+                    const opt = document.createElement('option');
+                    opt.value = hora;
+                    if (bloqueadas.has(hora)) {
+                        opt.textContent = `${hora} (Bloqueada - ya aceptada)`;
+                        opt.disabled = true;
+                    } else {
+                        opt.textContent = hora;
+                        algunaLibre = true;
+                    }
+                    selectHora.appendChild(opt);
+                });
+
+                selectHora.disabled = !algunaLibre;
+                if (!algunaLibre) {
+                    selectHora.innerHTML = '<option value="">No hay horas libres este día</option>';
+                }
+            } catch (e) {
+                selectHora.innerHTML = '<option value="">Error al cargar horas</option>';
+            }
+        });
+    </script>
 </body>
-
-
 
 </html>
